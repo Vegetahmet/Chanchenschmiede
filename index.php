@@ -138,7 +138,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'/'+id; s.parentNode.insertBefore(g,s);
 	})();
 </script>
-<img src="images/daniel_busra.jpg" alt="Logo" style="border-radius:1000px" >
       <h1 class="language_taital">Bildung und Unterstützung</h1>
       <h1 class="language_taital_1">für Kinder und Jugendliche, die eine Perspektive brauchen</h1>
       <div class="language_section_2 layout_padding">

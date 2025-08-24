@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $datenschutz = isset($_POST['datenschutz']) ? 'Ja' : 'Nein';
 
     // Hier kannst du die Daten weiterverarbeiten, z.B. per E-Mail versenden oder in einer Datenbank speichern.
-    $to = "info@musterschuler.de"; // Ziel-E-Mail-Adresse
+    $to = "info@chancenschmiede.com/"; // Ziel-E-Mail-Adresse
     $subject = "Neue Termin Anfrage von Musterschüler";
     $message = "
     Vorname: $firstName\n
