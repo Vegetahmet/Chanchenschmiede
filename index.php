@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Überprüfen, ob alle Felder ausgefüllt wurden
     if (!empty($name) && !empty($phone) && !empty($email) && !empty($messageContent)) {
         // E-Mail Informationen
-        $to = "info@chancenschmiede.de"; // Empfängeradresse
+        $to = "info@chancenschmiede.com"; // Empfängeradresse
         $subject = "Neue Kontaktanfrage von: $name";
         $messageBody = "
         Name: $name\n
@@ -106,8 +106,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   <div class="carousel-inner">
                      <div class="carousel-item active">
                         <p class="banner_text">Chancenschmiede</p>
-                        <h1 class="banner_taital">Chancen für<br>eine bessere Zukunft.</h1>
+                        <h1 class="banner_taital">Wir geben Kindern faire Bildungschancen<br> – auch bei finanziellen Hürden.</h1>
                         <div class="read_bt"><a href="contact.php">Termin vereinbaren.</a></div>
+
                      </div>
                
            
@@ -121,23 +122,81 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          <div class="play_icon"><a href="#"><img src="images/play-icon.png"></a></div>
       </div>
       <!--header section end -->
-<!-- twingle -->
+          <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div style="background: white; padding: 40px; border: 3px solid #000; border-radius: 20px; text-align: center; margin: 40px 0;">
+                    <h2 style="color: #333; font-size: 28px; font-weight: 700; margin-bottom: 20px;">Unsere Mission</h2>
+                    <p style="color: #333; font-size: 18px; margin-bottom: 15px;">
+                        Wir schließen Lernlücken, stärken Selbstvertrauen und öffnen neue Chancen – unabhängig vom Einkommen der Eltern.
+                    </p>
+                    <p style="color: #333; font-size: 16px; font-style: italic;">
+                        Bildung ist nicht nur Wissen, sondern der Schlüssel zu einer selbstbestimmten Zukunft.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div style="text-align: center; background: #f0f8ff; padding: 30px; border-radius: 15px; height: 100%;">
+                    <div style="background: white; padding: 20px; border-radius: 50%; width: 80px; height: 80px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <span style="font-size: 2rem;">😊</span>
+                    </div>
+                    <h5 style="color: #333; font-weight: 600; margin-bottom: 10px;">Lernfreude</h5>
+                    <p style="color: #666; font-size: 14px;">Wir wecken die natürliche Neugier und Freude am Lernen</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div style="text-align: center; background: #f0f8ff; padding: 30px; border-radius: 15px; height: 100%;">
+                    <div style="background: white; padding: 20px; border-radius: 50%; width: 80px; height: 80px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <span style="font-size: 2rem;">🎯</span>
+                    </div>
+                    <h5 style="color: #333; font-weight: 600; margin-bottom: 10px;">Individuelle Förderung</h5>
+                    <p style="color: #666; font-size: 14px;">Jedes Kind erhält maßgeschneiderte Unterstützung</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div style="text-align: center; background: #f0f8ff; padding: 30px; border-radius: 15px; height: 100%;">
+                    <div style="background: white; padding: 20px; border-radius: 50%; width: 80px; height: 80px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <span style="font-size: 2rem;">🤝</span>
+                    </div>
+                    <h5 style="color: #333; font-weight: 600; margin-bottom: 10px;">Gemeinsam stark</h5>
+                    <p style="color: #666; font-size: 14px;">Zusammen erreichen wir mehr für unsere Kinder</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="services_section layout_padding" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="language_taital">So unterstützen wir Sie</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto">
+                    <div class="text-center" style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <p style="color: #333; font-size: 18px; line-height: 1.6; margin-bottom: 30px;">
+                            Wenn kein Anspruch auf staatliche Förderung besteht, finden wir gemeinsam einen Weg, damit Ihr Kind die passende Lernförderung erhält. Wir helfen, einen Platz im Nachhilfe- oder Hausaufgabenprogramm der <strong>Studyfriends GmbH</strong> zu sichern – gefördert durch unsere Bildungspaten.
+                        </p>
+                        <div class="row justify-content-center">
+                          
+                            <div class="col-md-6">
+                                <a href="#foerderanfrage" style="background: #98FB98; color: #333; padding: 15px 40px; border-radius: 25px; text-decoration: none; font-weight: 600; display: inline-block; margin: 10px; transition: all 0.3s ease;" onmouseover="this.style.background='#90EE90'" onmouseout="this.style.background='#98FB98'">
+                                    Förderanfrage stellen
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <!-- twingle -->
       <!-- Sprachabschnitt -->
-      <div class="language_section layout_padding">
    <div class="container">
 
-   <script type="text/javascript">
-	(function() {
-		var u="https://spenden.twingle.de/embed/chancenschmiede-ggmbh/spendenkampagne-chancenschmiede/tw67b329517147a/widget";
-		var id = '_' + Math.random().toString(36).substr(2, 9);
-		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0], t=d.createElement('div');
-        t.id = 'twingle-public-embed-' + id;
-        document.currentScript.after(t);
-		g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'/'+id; s.parentNode.insertBefore(g,s);
-	})();
-</script>
+
       <h1 class="language_taital">Bildung und Unterstützung</h1>
       <h1 class="language_taital_1">für Kinder und Jugendliche, die eine Perspektive brauchen</h1>
       <div class="language_section_2 layout_padding">
@@ -170,10 +229,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
    </div>
 </div>
-
+   
       <!--language  section end -->
       <!--services section start -->
       <div class="services_section layout_padding">
+         
    <div class="container">
       <div class="row">
          <div class="col-md-6">
@@ -210,34 +270,79 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
       <!--Galeriebereich Ende -->
       <!--Über uns Abschnitt Anfang -->
-      <div class="about_section layout_padding" style="background-color:#270b60" id="aboutus">
-   <div class="container">
-      <h1 class="events_taital">Was wir bieten</h1>
-      <div class="about_section_2">
-         <div class="row">
-            <div class="col-md-6">
-               <div class="image_6"></div>
-            </div>
-            <div class="col-md-6">
-               <h1 class="events_taital">Mehr als Nachhilfe</h1>
-               <p class="events_text" style="margin-bottom: 20px;">Unsere Mission geht über reine Nachhilfe hinaus. Bei uns geht es darum, jungen Menschen langfristige Perspektiven zu eröffnen und sie in ihrer persönlichen Entwicklung zu stärken. Wir bieten:</p>
-               
-               <ul class="events_text" style="margin-bottom: 20px;">
-                  <li><strong>Einzelnachhilfe und Gruppenförderung:</strong> Maßgeschneiderte Lernhilfe für jedes Kind, angepasst an die individuellen Bedürfnisse.</li>
-                  <li><strong>Bildungs- und Teilhabeprogramme:</strong> Unterstützung für Kinder, die durch das Bildungspaket gefördert werden, aber auch für jene, die aus dem Raster fallen.</li>
-                  <li><strong>Spendenfinanzierte Angebote:</strong> Dank Ihrer Spenden können wir auch Kinder fördern, die keine staatlichen Hilfen erhalten, wie Waisenkinder aus Krisengebieten.</li>
-               </ul>
+      <!-- Spenden Section mit Buttons -->
+<section class="about_section layout_padding" style="background-color:#270b60;" id="aboutus">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 style="color:#fff; font-weight:700;">Unterstützen Sie uns</h2>
+      <p style="color:#ddd;">Wählen Sie aus, wie Sie uns unterstützen möchten:</p>
+    </div>
 
-               <p class="events_text" style="margin-bottom: 20px;">
-                  Darüber hinaus arbeiten wir eng mit Schulen und Bildungseinrichtungen zusammen, um maßgeschneiderte Programme zur Lernförderung zu entwickeln. Gemeinsam mit Schulen erarbeiten wir Pläne, um Schüler in ihrer individuellen Entwicklung zu unterstützen und ihre schulischen Leistungen nachhaltig zu verbessern. Unser Ziel ist es, jedem Schüler zu helfen, sein volles Potenzial auszuschöpfen und mit gestärktem Selbstvertrauen in den Unterricht zurückzukehren.
-               </p>
-               
-               <div class="appoinment_bt"><a href="contact.php">Mehr erfahren</a></div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
+    <!-- Buttons -->
+    <div class="d-flex justify-content-center mb-4">
+      <button id="btnPrivat" class="btn btn-outline-light px-4 me-2">
+        Privatperson
+      </button>
+      <button id="btnGewerbe" class="btn btn-light px-4 fw-bold active">
+        Gewerbe
+      </button>
+    </div>
+
+    <!-- Twingle-Widget -->
+    <div id="twingleEmbedContainer" class="text-center" style="min-height:300px;"></div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const container = document.getElementById("twingleEmbedContainer");
+
+  const LINKS = {
+    privat: "https://spenden.twingle.de/embed/chancenschmiede-ggmbh/spendenkampagne-chancenschmiede/tw67b329517147a/widget",
+    gewerbe: "https://spenden.twingle.de/embed/chancenschmiede-ggmbh/spendenkampagne-chancenschmiede/tw68b380d8afc5a/widget"
+  };
+
+  const btnPrivat = document.getElementById("btnPrivat");
+  const btnGewerbe = document.getElementById("btnGewerbe");
+
+  // Widget laden
+  function loadTwingle(url) {
+    container.innerHTML = "";
+    const id = '_' + Math.random().toString(36).substr(2, 9);
+    const t = document.createElement("div");
+    t.id = "twingle-public-embed-" + id;
+    container.appendChild(t);
+
+    const g = document.createElement("script");
+    g.type = "text/javascript";
+    g.async = true;
+    g.defer = true;
+    g.src = url + "/" + id;
+    document.body.appendChild(g);
+  }
+
+  // Button-Klicks
+  btnPrivat.addEventListener("click", function () {
+    btnPrivat.classList.add("btn-light", "fw-bold", "active");
+    btnPrivat.classList.remove("btn-outline-light");
+    btnGewerbe.classList.remove("btn-light", "fw-bold", "active");
+    btnGewerbe.classList.add("btn-outline-light");
+    loadTwingle(LINKS.privat);
+  });
+
+  btnGewerbe.addEventListener("click", function () {
+    btnGewerbe.classList.add("btn-light", "fw-bold", "active");
+    btnGewerbe.classList.remove("btn-outline-light");
+    btnPrivat.classList.remove("btn-light", "fw-bold", "active");
+    btnPrivat.classList.add("btn-outline-light");
+    loadTwingle(LINKS.gewerbe);
+  });
+
+  // Standard: Gewerbe direkt laden
+  loadTwingle(LINKS.gewerbe);
+})();
+</script>
+
 
 
       <!--Über uns Abschnitt Ende -->
@@ -316,23 +421,108 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <!--Veranstaltungsbereich Ende -->
       <!--Schülerbereich Anfang -->
       <div class="students_section layout_padding">
-   <div class="container">
-      <h1 class="language_taital">Helfen Sie mit</h1>
-      <h1 class="language_taital_1">Gemeinsam Chancen schaffen</h1>
-      <p class="events_text" style="color: #000; margin-bottom: 15px;">
-         Um unser Ziel zu erreichen, sind wir auf Unterstützung angewiesen. Jede Spende hilft uns, weitere Kinder und Jugendliche zu erreichen, ihnen Nachhilfe anzubieten und sie auf ihrem Bildungsweg zu begleiten.
+<!-- Bildungspate & Erfolgsgeschichten - Kombinierte Section -->
+<section id="bildungspate" class="patenschaft_section layout_padding">
+  <div class="container">
+
+    <!-- Hauptüberschrift -->
+    <div class="section_heading text-center">
+      <h2 class="patenschaft_title">
+        So werden Sie Bildungspate – <span>und so wirkt Ihre Unterstützung</span>
+      </h2>
+    </div>
+
+    <div class="row">
+      <!-- Textblock links -->
+      <div class="col-md-8">
+        <div class="patenschaft_panel">
+          <ul class="patenschaft_list">
+            <li><strong>Sie schenken einem Kind in unserer Region</strong> wertvolle Lernchancen.</li>
+            <li><strong>Mit 60 € pro Monat</strong> finanzieren Sie einen Platz im Nachhilfe- oder Hausaufgabenprogramm.</li>
+            <li><strong>Sie bestimmen, in welchem Rhythmus Sie fördern</strong> – monatlich, quartalsweise oder jährlich – <strong>wie vielen Kindern</strong> Sie Lernchancen ermöglichen.</li>
+            <li>Wir zeigen Ihnen transparent, wie Ihre Unterstützung eingesetzt wird und welche Wirkung sie entfaltet.</li>
+            <li>Auf Wunsch nennen wir Sie öffentlich als Bildungspaten auf unserer Website und in der Presse.</li>
+          </ul>
+          <p class="patenschaft_note">
+            Ihr Beitrag kommt direkt dort an, wo er gebraucht wird – ohne Umwege, für eine bessere Zukunft.
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA rechts -->
+      <div class="col-md-4">
+        <aside class="patenschaft_cta">
+          <a class="btn btn-primarys patenschaft_btn" href="/#kontakt">
+            Jetzt Bildungspate werden
+          </a>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Erfolgsgeschichten -->
+    <div class="section_heading" style="margin-top:50px;">
+      <h3>Erfolgsgeschichten</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="story_card">
+          <p><strong>Lena, 13 Jahre</strong>, hat wieder Freude am Lernen –<br>
+          dank eines Bildungspaten aus Bad Lippspringe.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="story_card">
+          <p><strong>Danilo, 15 Jahre</strong>, hat den Realschulabschluss geschafft –<br>
+          dank eines Bildungspaten aus Schlangen.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="story_card">
+          <p><strong>Amina, 7 Jahre</strong>, erledigt jetzt stolz selbstständig Hausaufgaben –<br>
+          dank eines Bildungspaten aus Bad Lippspringe.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="story_card">
+          <p><strong>Fatima, 17 Jahre</strong>, hat am Berufskolleg den höheren Abschluss erworben –<br>
+          dank eines Bildungspaten aus Bad Lippspringe.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA unten -->
+    <div class="stories_cta">
+      <p>
+        Unterstützen Sie gezielt Familien mit kleinem Einkommen<br>
+        und machen Sie Bildung für alle möglich. 
+        <a href="#bildungspate"><strong>Bildungspate werden!</strong></a>
       </p>
-      <p class="events_text" style="color: #000; margin-bottom: 15px;">
-         Helfen Sie uns, eine nachhaltige Basis für junge Menschen zu schaffen, die oft übersehen werden. Lassen Sie uns gemeinsam die Zukunft gestalten!
-      </p>
-      <p class="events_text" style="color: #000; font-weight: bold; margin-bottom: 15px;">
-         Ihre Spende schafft Chancen – Ihre Unterstützung verändert Leben.
-      </p>
-      <p class="events_text" style="color: #000; margin-bottom: 15px;">
-         Wir freuen uns, mit Ihnen ins Gespräch zu kommen und gemeinsam Ideen zur Unterstützung dieser jungen Menschen zu entwickeln. Bei Fragen zu unserer Arbeit oder wenn Sie unsere Mission unterstützen möchten, können Sie uns jederzeit kontaktieren.
-      </p>
-   </div>
-</div>
+    </div>
+
+  </div>
+</section>
+<!-- Bildungspate & Erfolgsgeschichten Ende 
+<section id="partner" class="partners_section layout_padding">
+  <div class="container">
+    <div class="section_heading text-center">
+      <h2>Unsere Partner</h2>
+      <p class="partners_sub">Gemeinsam schaffen wir Chancen.</p>
+    </div>
+
+    <div id="partnerScroller" class="partner-scroller">
+      <div class="partner-track">
+       LOGO LİSTESİ: sadece buraya img ekle 
+       
+        <img src="/assets/logos/partner4.png" alt="Partner 4" class="partner_logo">
+        <img src="/assets/logos/partner5.png" alt="Partner 5" class="partner_logo">
+        <img src="/assets/logos/partner6.png" alt="Partner 6" class="partner_logo">
+      </div>
+    </div>
+  </div>
+</section>
+
+ Unsere Partner – Ende 
+</div>-->
 
 
 
@@ -406,22 +596,77 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 <!-- Styles für die Links -->
-<style>
-   .footer_links {
-      padding-top: 20px;
-   }
 
-   .footer-link {
-      color: #ffffff;} /* Farbe
-   
+    <script>
+/* ===== Partner Logos — RAF Scroller ===== */
+(function () {
+  const ROOT_ID = 'partnerScroller';
+  const SPEED_PX_PER_SEC = 60;     // Hız ayarı (px/sn)
+  let state = { x: 0, w: 0, contentW: 0, playing: true, lastTs: 0 };
 
-      
-      <!--footer section end -->
-      <!--copyright section start -->
-    
-      </div>
-      <!--copyright section end -->
-      <!-- Javascript Dateien-->
+  function duplicateUntilFill(track, containerWidth) {
+    // İçeriği en az 2× konteyner genişliği olana kadar kopyala
+    const originals = Array.from(track.children);
+    let total = track.scrollWidth;
+    while (total < containerWidth * 2 && originals.length) {
+      originals.forEach(n => track.appendChild(n.cloneNode(true)));
+      total = track.scrollWidth;
+    }
+    return total;
+  }
+
+  function init() {
+    const root = document.getElementById(ROOT_ID);
+    if (!root) return;
+    const track = root.querySelector('.partner-track');
+    if (!track) return;
+
+    state.w = root.clientWidth;
+    state.contentW = duplicateUntilFill(track, state.w);
+
+    // Hover pause/play
+    root.addEventListener('mouseenter', () => { state.playing = false; root.classList.add('is-paused'); });
+    root.addEventListener('mouseleave', () => { state.playing = true;  root.classList.remove('is-paused'); });
+
+    // Sekme görünürlüğü
+    document.addEventListener('visibilitychange', () => { state.playing = !document.hidden; });
+
+    // Resize olunca yeniden kur
+    let resizeTO;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTO);
+      resizeTO = setTimeout(() => {
+        track.style.transform = 'translateX(0px)';
+        state.x = 0;
+        state.w = root.clientWidth;
+        state.contentW = duplicateUntilFill(track, state.w);
+      }, 150);
+    });
+
+    // Animasyon döngüsü
+    const step = (ts) => {
+      const dt = state.lastTs ? (ts - state.lastTs) / 1000 : 0;
+      state.lastTs = ts;
+      if (state.playing && dt > 0) {
+        state.x -= SPEED_PX_PER_SEC * dt;
+        if (Math.abs(state.x) >= state.contentW / 2) state.x = 0;
+        track.style.transform = `translateX(${state.x}px)`;
+      }
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+
+  
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
