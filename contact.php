@@ -58,7 +58,16 @@ $page_keywords = "Probestunde, Nachhilfe, Termin, Kontakt";
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="images/web-app-manifest-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="images/web-app-manifest-512x512.png" sizes="512x512" type="image/png">
+    <link rel="manifest" href="images/site.webmanifest">
+
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -79,7 +88,7 @@ $page_keywords = "Probestunde, Nachhilfe, Termin, Kontakt";
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div>
-                    <a href="index.php"><img src="images/logo.png" alt="Logo" class="logo-img"></a>
+                    <a href="index.php"><img src="images/V1-transparent.png" alt="Chancenschmiede Logo" class="logo-img"></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigation umschalten">
                     <span class="navbar-toggler-icon"></span>
@@ -266,46 +275,7 @@ $page_keywords = "Probestunde, Nachhilfe, Termin, Kontakt";
     </section>
 
     <!-- Footer -->
-    <div class="footer_section">
-        <div class="container">
-            <div class="call_main">
-                <div class="call_text">
-                    <img src="images/call-icon.png" alt="Telefon">
-                    <span class="padding_left_15">+49 159 06377920</span>
-                </div>
-                <div class="call_text">
-                    <img src="images/mail-icon.png" alt="E-Mail">
-                    <span class="padding_left_15">info@chancenschmiede.com</span>
-                </div>
-            </div>
-
-            <div class="footer_links mt-4">
-                <ul class="list-inline text-center">
-                    <li class="list-inline-item">
-                        <a href="impressum.php" class="footer-link">Impressum</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="agbs.php" class="footer-link">AGBs&Datenschutzerklärung</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer_links mt-4">
-                <ul class="list-inline text-center">
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com/studyfriends.de" target="_blank" class="social-link">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.instagram.com/studyfriends.de" target="_blank" class="social-link">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <?php include 'includes/footer.php'; ?>
 
     <!-- Copyright -->
     <div class="copyright_section">

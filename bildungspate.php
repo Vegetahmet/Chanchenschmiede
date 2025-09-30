@@ -68,7 +68,20 @@ $page_keywords = "Bildungspate, Spende, Nachhilfe, Förderung";
     <!-- Form Section - Centered -->
     <section class="pate-form-main">
         <div class="container">
-            <div class="row justify-content-center">
+            <!-- Choice Tabs -->
+            <div class="pate-choice-tabs" data-aos="fade-up">
+                <button id="btnKontakt" class="pate-choice-tab pate-choice-tab--active">
+                    <span class="pate-choice-tab__icon">📧</span>
+                    <span class="pate-choice-tab__text">Kontakt aufnehmen</span>
+                </button>
+                <button id="btnSpenden" class="pate-choice-tab">
+                    <span class="pate-choice-tab__icon">💝</span>
+                    <span class="pate-choice-tab__text">Direkt spenden</span>
+                </button>
+            </div>
+
+            <!-- Contact Form -->
+            <div id="kontaktSection" class="row justify-content-center">
                 <div class="col-lg-9 col-xl-8" data-aos="zoom-in">
                     <div class="pate-form-box">
                         <div class="pate-form-box__header">
@@ -136,8 +149,110 @@ $page_keywords = "Bildungspate, Spende, Nachhilfe, Förderung";
                     </div>
                 </div>
             </div>
+
+            <!-- Donation Widget -->
+            <div id="spendenSection" class="row justify-content-center" style="display: none;">
+                <div class="col-lg-10 col-xl-9" data-aos="zoom-in">
+                    <div class="pate-donation-box">
+                        <div class="pate-donation-box__header">
+                            <div class="pate-form-box__icon">💝</div>
+                            <h2 class="pate-form-box__title">Jetzt spenden</h2>
+                            <p class="pate-form-box__subtitle">
+                                Unterstützen Sie uns mit einer Spende und ermöglichen Sie Kindern faire Bildungschancen
+                            </p>
+                        </div>
+
+                        <!-- Twingle Toggle -->
+                        <div class="donation-tabs">
+                            <button id="btnPrivatPate" class="donation-tab">
+                                <span class="donation-tab__icon">👤</span>
+                                <span class="donation-tab__text">Privatperson</span>
+                            </button>
+                            <button id="btnGewerbePate" class="donation-tab donation-tab--active">
+                                <span class="donation-tab__icon">🏢</span>
+                                <span class="donation-tab__text">Gewerbe</span>
+                            </button>
+                        </div>
+
+                        <!-- Twingle Widget -->
+                        <div class="donation-widget">
+                            <div id="twingleEmbedContainerPate"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+<script>
+// Toggle zwischen Kontakt und Spenden
+(function() {
+    const btnKontakt = document.getElementById('btnKontakt');
+    const btnSpenden = document.getElementById('btnSpenden');
+    const kontaktSection = document.getElementById('kontaktSection');
+    const spendenSection = document.getElementById('spendenSection');
+
+    btnKontakt.addEventListener('click', function() {
+        btnKontakt.classList.add('pate-choice-tab--active');
+        btnSpenden.classList.remove('pate-choice-tab--active');
+        kontaktSection.style.display = 'flex';
+        spendenSection.style.display = 'none';
+    });
+
+    btnSpenden.addEventListener('click', function() {
+        btnSpenden.classList.add('pate-choice-tab--active');
+        btnKontakt.classList.remove('pate-choice-tab--active');
+        kontaktSection.style.display = 'none';
+        spendenSection.style.display = 'flex';
+
+        // Load Twingle widget on first click
+        if (!window.twingleLoaded) {
+            loadTwinglePate(LINKS.gewerbe);
+            window.twingleLoaded = true;
+        }
+    });
+})();
+
+// Twingle Widget Logic
+(function () {
+    const container = document.getElementById("twingleEmbedContainerPate");
+
+    window.LINKS = {
+        privat: "https://spenden.twingle.de/embed/chancenschmiede-ggmbh/spendenkampagne-chancenschmiede/tw67b329517147a/widget",
+        gewerbe: "https://spenden.twingle.de/embed/chancenschmiede-ggmbh/spendenkampagne-chancenschmiede/tw68b380d8afc5a/widget"
+    };
+
+    const btnPrivatPate = document.getElementById("btnPrivatPate");
+    const btnGewerbePate = document.getElementById("btnGewerbePate");
+
+    window.loadTwinglePate = function(url) {
+        container.innerHTML = "";
+        const id = '_' + Math.random().toString(36).substr(2, 9);
+        const t = document.createElement("div");
+        t.id = "twingle-public-embed-" + id;
+        container.appendChild(t);
+
+        const g = document.createElement("script");
+        g.type = "text/javascript";
+        g.async = true;
+        g.defer = true;
+        g.src = url + "/" + id;
+        document.body.appendChild(g);
+    };
+
+    btnPrivatPate.addEventListener("click", function () {
+        btnPrivatPate.classList.add("donation-tab--active");
+        btnGewerbePate.classList.remove("donation-tab--active");
+        loadTwinglePate(LINKS.privat);
+    });
+
+    btnGewerbePate.addEventListener("click", function () {
+        btnGewerbePate.classList.add("donation-tab--active");
+        btnPrivatPate.classList.remove("donation-tab--active");
+        loadTwinglePate(LINKS.gewerbe);
+    });
+})();
+</script>
 
     <!-- Benefits Section - 3 Columns -->
     <section class="pate-benefits-grid">
@@ -267,19 +382,7 @@ $page_keywords = "Bildungspate, Spende, Nachhilfe, Förderung";
         </div>
     </section>
 
-    <!-- Footer Start -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="text-center" style="color: #fefefe; padding: 20px 0;">
-                        © <?php echo date('Y'); ?> Chancenschmiede. Alle Rechte vorbehalten.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+<?php include 'includes/footer.php'; ?>
 
     <!-- Javascript files -->
     <script src="js/jquery.min.js"></script>

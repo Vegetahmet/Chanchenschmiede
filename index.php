@@ -640,39 +640,12 @@ $page_keywords = "Nachhilfe, Bildung, Förderung, Bildungspate";
                       </div>
                   </div>
 
-                  <div class="call_main">
-                      <div class="call_text">
-                          <img src="images/call-icon.png" alt="Telefon">
-                          <span>+49 159 06377920</span>
-                      </div>
-                      <div class="call_text">
-                          <img src="images/mail-icon.png" alt="E-Mail">
-                          <span>info@chancenschmiede.com</span>
-                      </div>
-                  </div>
-
-                  <!-- Neuer Abschnitt für Impressum, AGBs und Datenschutzerklärung -->
-                  <div class="footer_links mt-4">
-                      <ul class="list-inline text-center">
-                          <li class="list-inline-item">
-                              <a href="impressum.php" class="footer-link">Impressum</a>
-                          </li>
-                          <li class="list-inline-item">
-                              <a href="agbs.php" class="footer-link">AGBs&Datenschutzerklärung</a>
-                          </li>
-                      </ul>
-                  </div>
-
-                  <div class="footer_links mt-4">
-                      <ul class="list-inline text-center">
-                          <li>Logo made by <a href="https://www.designevo.com/" title="Free Online Logo Maker" class="footer-link">DesignEvo free logo creator</a></li>
-                          <li>Photos designed by <a href="https://de.freepik.com/fotos-kostenlos/mittlere-aufnahme-eines-jungen-mannes-der-mathematik-unterrichtet_45114618.htm title="Freepik" class="footer-link">Freepik</a> <a href="https://de.freepik.com/autor/kamranaydinov" title="Freepik" class="footer-link">KamranAydinov</a> <a href="https://de.freepik.com/fotos-kostenlos/ein-junges-maedchen-mit-einem-rucksack-auf-den-schultern-auf-einem-gelben-hintergrund-der-mit-generative-ai-technologie-erstellt-wurde_264307615.htm" title="Freepik" class="footer-link">atlascompany</a> <a href="https://www.freepik.com/free-photo/book-day-with-group-younf-childre_6914198.htm#fromView=serie&position=6" title="Freepik" class="footer-link">Freepik</a></li>
-                      </ul>
-                  </div>
               </div>
           </div>
       </section>
       <!-- Contact Section End -->
+
+<?php include 'includes/footer.php'; ?>
 
 <!-- Styles für die Links -->
 

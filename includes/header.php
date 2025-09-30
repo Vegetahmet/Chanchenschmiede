@@ -16,8 +16,14 @@
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <!-- Responsive CSS -->
       <link rel="stylesheet" href="css/responsive.css">
-      <!-- Favicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Favicons -->
+      <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+      <link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+      <link rel="icon" href="images/web-app-manifest-192x192.png" sizes="192x192" type="image/png">
+      <link rel="icon" href="images/web-app-manifest-512x512.png" sizes="512x512" type="image/png">
+      <link rel="manifest" href="images/site.webmanifest">
       <!-- Scrollbar CSS -->
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <!-- Font Awesome -->
@@ -38,11 +44,11 @@
       </div>
 
       <!--header section start -->
-      <div class="header_section <?php echo (basename($_SERVER['PHP_SELF']) == 'bildungspate.php' || basename($_SERVER['PHP_SELF']) == 'contact.php') ? 'header_section--no-bg' : ''; ?>">
+      <div class="header_section <?php echo (basename($_SERVER['PHP_SELF']) == 'bildungspate.php' || basename($_SERVER['PHP_SELF']) == 'contact.php' || basename($_SERVER['PHP_SELF']) == 'partner.php') ? 'header_section--no-bg' : ''; ?>">
          <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                <div>
-                  <a href="index.php"><img src="images/logo.png" alt="Logo" class="logo-img"></a>
+                  <a href="index.php"><img src="images/V1-transparent.png" alt="Chancenschmiede Logo" class="logo-img"></a>
                </div>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigation umschalten">
                   <span class="navbar-toggler-icon"></span>
@@ -57,6 +63,9 @@
                      </li>
                      <li class="nav-item <?php echo (basename($_SERVER['PHP_SELF']) == 'bildungspate.php') ? 'active' : ''; ?>">
                         <a class="nav-link" href="bildungspate.php">Bildungspate werden</a>
+                     </li>
+                     <li class="nav-item <?php echo (basename($_SERVER['PHP_SELF']) == 'partner.php') ? 'active' : ''; ?>">
+                        <a class="nav-link" href="partner.php">Partner</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="index.php#contact">Kontakt</a>
