@@ -82,6 +82,27 @@ body {
   overflow-x: hidden !important;
 }
 
+/* AOS Fix - verhindert dass AOS Elemente andere Elemente blockieren */
+[data-aos="fade-up"] {
+  overflow: visible !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+/* Alternative: Wenn AOS Animationen behalten werden sollen */
+.donation-hero[data-aos] {
+  position: relative !important;
+  z-index: auto !important;
+}
+
+/* Stelle sicher dass AOS animierte Elemente nicht den ganzen Bildschirm blockieren */
+[data-aos].aos-animate {
+  position: relative !important;
+  pointer-events: auto !important;
+  overflow: visible !important;
+}
+
+
 .logo-img {
   max-height: 120px; /* Passe die Höhe hier an */
   width: auto;
@@ -3730,12 +3751,22 @@ textarea#comment::placeholder {
 .donation-section {
   background: linear-gradient(135deg, #270b60 0%, #3d1485 100%);
   padding: 120px 0 100px 0;
+  position: relative;
+  width: 100%;
+  contain: layout; /* Verhindert dass das Element andere Bereiche beeinflusst */
+  z-index: 1; /* Niedrigere z-index als andere Elemente */
+}
+
+.donation-section .container {
+  position: relative;
+  z-index: 2;
 }
 
 .donation-hero {
   text-align: center;
   max-width: 800px;
   margin: 0 auto 60px;
+  position: relative;
 }
 
 .donation-hero__badge {
