@@ -331,26 +331,24 @@ button {
 }
 
 .read_bt {
-  width: 170px;
+  width: auto;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
 .read_bt a {
-  width: 100%;
-  float: left;
   font-size: 16px;
-  color: #dbc64c;
-  border: 3px solid #dbc64c;
   text-align: center;
-  padding: 10px 0px;
   margin-top: 60px;
-  background-color: white;
 }
 
-.read_bt a:hover {
-  color: #dbc64c;
-  background-color: #ffffff;
+/* Override für Hero CTA im Banner */
+.read_bt a.btn-hero-cta {
+  width: auto;
+  float: none;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .play_icon {
@@ -1013,57 +1011,77 @@ button {
 
 .touch_text {
   width: 100%;
-  float: left;
-  font-size: 30px;
+  font-size: 40px;
   color: #ffffff;
   text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .email_box {
-  width: 50%;
-  margin: 0 auto;
-  height: auto;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .input_main {
   width: 100%;
-  float: left;
-  margin-top: 20px;
 }
 
 .email-bt {
-  color: #929191;
+  color: #ffffff;
   width: 100%;
   height: auto;
-  font-size: 18px;
-  padding: 10px 20px 0px 0px;
-  background: transparent !important;
-  border-bottom: 1px solid #8f8f8f !important;
-  border: 0px;
+  font-size: 16px;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.email-bt:focus {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 0 0 3px rgba(152, 251, 152, 0.2);
+  color: #ffffff;
 }
 
 input.email-bt::placeholder {
-  color: #929191;
+  color: #b0b0b0;
 }
 
 .massage-bt {
-  color: #929191;
+  color: #ffffff;
   width: 100%;
-  height: 70px;
-  font-size: 18px;
-  padding: 36px 20px 0px 0px;
-  background: transparent !important;
-  border: 0px;
-  border-bottom: 1px solid #8f8f8f !important;
+  min-height: 120px;
+  font-size: 16px;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.massage-bt:focus {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 0 0 3px rgba(152, 251, 152, 0.2);
+  color: #ffffff;
 }
 
 textarea#comment::placeholder {
-  color: #929191;
+  color: #b0b0b0;
 }
 
 .send_bt {
-  width: 150px;
-  float: right;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .send_bt a {
@@ -1085,18 +1103,36 @@ textarea#comment::placeholder {
 }
 
 .call_main {
-  width: 50%;
+  max-width: 800px;
   display: flex;
-  text-align: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
   margin: 0 auto;
-  padding-top: 50px;
+  padding: 40px 20px;
 }
 
 .call_text {
-  width: 100%;
-  float: left;
+  display: flex;
+  align-items: center;
+  gap: 15px;
   font-size: 18px;
   color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px 30px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.call_text:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.call_text img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
 }
 
 .padding_left_15 {
@@ -1651,6 +1687,37 @@ textarea#comment::placeholder {
   box-shadow: var(--shadow-md);
 }
 
+/* Hero CTA Button - prominenterer Style */
+.btn-hero-cta {
+  display: inline-block;
+  padding: 18px 50px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-xl);
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(152, 251, 152, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-hero-cta:hover {
+  background-color: #90EE90;
+  color: var(--text-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(152, 251, 152, 0.5);
+}
+
+.btn-hero-cta:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(152, 251, 152, 0.4);
+}
+
 /* Small Button (Navigation, etc.) */
 .btn-small {
   padding: 8px 20px;
@@ -1681,6 +1748,16 @@ textarea#comment::placeholder {
 .card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-3px);
+}
+
+/* Card Tilt Effect */
+.card-tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
+}
+
+.card-tilt:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
 /* Card mit Icon */
@@ -1725,10 +1802,28 @@ textarea#comment::placeholder {
   margin-bottom: 0;
 }
 
-/* Card mit Highlight-Border */
+/* Card mit Highlight-Border - Mission Card */
 .card--highlight {
-  border: 3px solid #000;
-  box-shadow: none;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card--highlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
+}
+
+.card--highlight:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
 }
 
 /* Card mit farbigem Border */
@@ -1830,7 +1925,25 @@ textarea#comment::placeholder {
   float: left;
 }
 
-/* Spezielle Section-Typen */
+/* Section Background Types */
+.section--bg-white {
+  background: var(--bg-white);
+}
+
+.section--bg-light {
+  background: var(--bg-light);
+}
+
+.section--bg-primary {
+  background: var(--color-primary);
+}
+
+.section--bg-dark {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 80px 0 50px 0;
+}
+
+/* Legacy Section-Typen (für Rückwärtskompatibilität) */
 .section--hero {
   background-image: url(../images/banner-bg.webp);
   background-size: 100%;
@@ -1842,7 +1955,7 @@ textarea#comment::placeholder {
 }
 
 .section--target-group {
-  background: var(--bg-white);
+  background: var(--bg-light);
 }
 
 .section--support {
@@ -1854,7 +1967,195 @@ textarea#comment::placeholder {
 }
 
 .section--patenschaft {
-  background: #f7f7fb;
+  background: var(--bg-light);
+}
+
+.section--patenschaft-modern {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 80px 0;
+}
+
+/* Patenschaft Hero */
+.patenschaft-hero {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.patenschaft-hero__badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #98FB98 0%, #90EE90 100%);
+  color: var(--text-dark);
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(152, 251, 152, 0.3);
+}
+
+.patenschaft-hero__title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #270b60 0%, #dbc64c 50%, #98FB98 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.patenschaft-hero__subtitle {
+  font-size: 20px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Patenschaft Features */
+.patenschaft-feature {
+  background: white;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.patenschaft-feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  border-color: var(--color-accent);
+}
+
+.patenschaft-feature__icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.patenschaft-feature__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.patenschaft-feature__text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA Box */
+.patenschaft-cta-box {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #3a1570 100%);
+  padding: 50px 40px;
+  border-radius: 25px;
+  text-align: center;
+  margin: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.patenschaft-cta-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(219, 198, 76, 0.1) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.patenschaft-cta-box h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.patenschaft-cta-box p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.patenschaft-cta-box .btn-hero-cta {
+  position: relative;
+  z-index: 1;
+}
+
+/* Success Cards */
+.success-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  height: 100%;
+  border-left: 4px solid var(--color-accent);
+}
+
+.success-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.success-card__icon {
+  font-size: 40px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.success-card__content {
+  flex: 1;
+}
+
+.success-card__name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.success-card__text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.success-card__location {
+  font-size: 14px;
+  color: #999;
+  font-weight: 500;
 }
 
 .section--contact {

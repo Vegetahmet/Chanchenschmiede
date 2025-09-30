@@ -68,6 +68,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!-- AOS Animation Library -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    </head>
    <body>
       <!--header section start -->
@@ -106,8 +108,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   <div class="carousel-inner">
                      <div class="carousel-item active">
                         <p class="banner_text">Chancenschmiede</p>
-                        <h1 class="banner_taital">Wir geben Kindern faire Bildungschancen<br> – auch bei finanziellen Hürden.</h1>
-                        <div class="read_bt"><a href="contact.php" class="btn-success-custom">Termin vereinbaren</a></div>
+                        <h1 class="banner_taital" id="typingText"></h1>
+                        <div class="read_bt"><a href="contact.php" class="btn-hero-cta">Jetzt Termin vereinbaren</a></div>
 
                      </div>
                
@@ -118,22 +120,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          </div>
          <!--banner section end -->
       </div>
-      <div class="container">
-         <div class="play_icon"><a href="#"><img src="images/play-icon.png"></a></div>
-      </div>
       <!--header section end -->
 
       <!-- Mission Section Start -->
-      <section class="section section--features">
+      <section class="section section--bg-white">
           <div class="container">
             <div class="row justify-content-center mb-5">
-                <div class="col-lg-10">
-                    <div class="card card--highlight text-center">
-                        <h2 class="card__title" style="font-size: 28px; margin-bottom: 20px;">Unsere Mission</h2>
-                        <p class="card__subtitle" style="font-size: 18px; margin-bottom: 15px;">
+                <div class="col-lg-10" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card card--highlight text-center" style="padding: 50px 40px;">
+                        <div style="display: inline-block; background: linear-gradient(135deg, #270b60 0%, #dbc64c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
+                            Unsere Mission
+                        </div>
+                        <h2 style="font-size: 32px; font-weight: 700; color: #1a1a1a; margin-bottom: 25px; line-height: 1.3;">
                             Wir schließen Lernlücken, stärken Selbstvertrauen und öffnen neue Chancen – unabhängig vom Einkommen der Eltern.
-                        </p>
-                        <p class="card__subtitle" style="font-size: 16px; font-style: italic;">
+                        </h2>
+                        <p style="font-size: 18px; color: #666; font-style: italic; max-width: 700px; margin: 0 auto;">
                             Bildung ist nicht nur Wissen, sondern der Schlüssel zu einer selbstbestimmten Zukunft.
                         </p>
                     </div>
@@ -141,8 +142,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card card--icon">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card card--icon card-tilt">
                     <div class="card__icon-wrapper">
                         <span class="card__icon-emoji">😊</span>
                     </div>
@@ -150,8 +151,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <p class="card__subtitle">Wir wecken die natürliche Neugier und Freude am Lernen</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card card--icon">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card card--icon card-tilt">
                     <div class="card__icon-wrapper">
                         <span class="card__icon-emoji">🎯</span>
                     </div>
@@ -159,8 +160,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <p class="card__subtitle">Jedes Kind erhält maßgeschneiderte Unterstützung</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card card--icon">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card card--icon card-tilt">
                     <div class="card__icon-wrapper">
                         <span class="card__icon-emoji">🤝</span>
                     </div>
@@ -174,14 +175,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <!-- Mission Section End -->
 
       <!-- Support Section Start -->
-      <section class="section section--support">
+      <section class="section section--bg-light">
           <div class="container">
-              <div class="section-header">
+              <div class="section-header" data-aos="fade-down">
                   <h1 class="section-header__title">So unterstützen wir Sie</h1>
               </div>
               <div class="section-content">
                   <div class="row align-items-center">
-                      <div class="col-lg-8 mx-auto">
+                      <div class="col-lg-8 mx-auto" data-aos="zoom-in" data-aos-delay="200">
                           <div class="text-center support-box">
                               <p class="support-box__text">
                                   Wenn kein Anspruch auf staatliche Förderung besteht, finden wir gemeinsam einen Weg, damit Ihr Kind die passende Lernförderung erhält. Wir helfen, einen Platz im Nachhilfe- oder Hausaufgabenprogramm der <strong>Studyfriends GmbH</strong> zu sichern – gefördert durch unsere Bildungspaten.
@@ -202,7 +203,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <!-- Support Section End -->
 
       <!-- Features Icons Section Start -->
-      <section class="section section--features">
+      <section class="section section--bg-white">
           <div class="container">
               <div class="section-header">
                   <h1 class="section-header__title">Bildung und Unterstützung</h1>
@@ -249,7 +250,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <!-- Features Icons Section End -->
 
       <!-- Target Group Section Start -->
-      <section class="section section--target-group">
+      <section class="section section--bg-light">
           <div class="container">
               <div class="section-content">
                   <div class="row">
@@ -284,7 +285,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </section>
       <!-- Target Group Section End -->
       <!-- Donation Section Start -->
-      <section class="section section--donation section--medium-padding" id="aboutus">
+      <section class="section section--bg-primary section--medium-padding" id="aboutus">
           <div class="container">
               <div class="section-header">
                   <h2 class="section-header__title--white">Unterstützen Sie uns</h2>
@@ -435,83 +436,127 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>-->
       <!--Veranstaltungsbereich Ende -->
       <!-- Patenschaft Section Start -->
-      <section id="bildungspate" class="section section--patenschaft section--medium-padding">
+      <section id="bildungspate" class="section section--patenschaft-modern">
           <div class="container">
-              <!-- Hauptüberschrift -->
-              <div class="section-header">
-                  <h2 class="patenschaft_title">
-                      So werden Sie Bildungspate – <span>und so wirkt Ihre Unterstützung</span>
+              <!-- Hero Header -->
+              <div class="patenschaft-hero" data-aos="fade-up">
+                  <div class="patenschaft-hero__badge">💚 Bildungspate werden</div>
+                  <h2 class="patenschaft-hero__title">
+                      Schenken Sie einem Kind neue <span class="gradient-text">Chancen</span>
                   </h2>
+                  <p class="patenschaft-hero__subtitle">
+                      Mit Ihrer Unterstützung ermöglichen Sie gezielte Förderung und eröffnen neue Zukunftsperspektiven
+                  </p>
               </div>
 
-              <div class="section-content">
-                  <div class="row">
-                      <!-- Textblock links -->
-                      <div class="col-md-8">
-                          <div class="card card--bordered">
-                              <ul class="patenschaft_list">
-                                  <li><strong>Sie schenken einem Kind in unserer Region</strong> wertvolle Lernchancen.</li>
-                                  <li><strong>Mit 60 € pro Monat</strong> finanzieren Sie einen Platz im Nachhilfe- oder Hausaufgabenprogramm.</li>
-                                  <li><strong>Sie bestimmen, in welchem Rhythmus Sie fördern</strong> – monatlich, quartalsweise oder jährlich – <strong>wie vielen Kindern</strong> Sie Lernchancen ermöglichen.</li>
-                                  <li>Wir zeigen Ihnen transparent, wie Ihre Unterstützung eingesetzt wird und welche Wirkung sie entfaltet.</li>
-                                  <li>Auf Wunsch nennen wir Sie öffentlich als Bildungspaten auf unserer Website und in der Presse.</li>
-                              </ul>
-                              <p class="patenschaft_note">
-                                  Ihr Beitrag kommt direkt dort an, wo er gebraucht wird – ohne Umwege, für eine bessere Zukunft.
-                              </p>
-                          </div>
-                      </div>
-
-                      <!-- CTA rechts -->
-                      <div class="col-md-4">
-                          <aside class="patenschaft_cta">
-                              <a class="btn-success-custom" href="/#kontakt">
-                                  Jetzt Bildungspate werden
-                              </a>
-                          </aside>
+              <!-- Features Grid -->
+              <div class="row mt-5">
+                  <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                      <div class="patenschaft-feature">
+                          <div class="patenschaft-feature__icon">🎯</div>
+                          <h3 class="patenschaft-feature__title">Direkte Wirkung</h3>
+                          <p class="patenschaft-feature__text">Sie schenken einem Kind in unserer Region wertvolle Lernchancen und sehen die direkte Wirkung Ihrer Unterstützung.</p>
                       </div>
                   </div>
-
-                  <!-- Erfolgsgeschichten -->
-                  <div class="section-header" style="margin-top:50px;">
-                      <h3 class="section-header__subtitle">Erfolgsgeschichten</h3>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-6">
-                          <div class="card card--story">
-                              <p><strong>Lena, 13 Jahre</strong>, hat wieder Freude am Lernen –<br>
-                              dank eines Bildungspaten aus Bad Lippspringe.</p>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="card card--story">
-                              <p><strong>Danilo, 15 Jahre</strong>, hat den Realschulabschluss geschafft –<br>
-                              dank eines Bildungspaten aus Schlangen.</p>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="card card--story">
-                              <p><strong>Amina, 7 Jahre</strong>, erledigt jetzt stolz selbstständig Hausaufgaben –<br>
-                              dank eines Bildungspaten aus Bad Lippspringe.</p>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="card card--story">
-                              <p><strong>Fatima, 17 Jahre</strong>, hat am Berufskolleg den höheren Abschluss erworben –<br>
-                              dank eines Bildungspaten aus Bad Lippspringe.</p>
-                          </div>
+                  <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                      <div class="patenschaft-feature">
+                          <div class="patenschaft-feature__icon">💰</div>
+                          <h3 class="patenschaft-feature__title">Flexible Förderung</h3>
+                          <p class="patenschaft-feature__text">Mit <strong><span class="counter" data-target="60">0</span> € pro Monat</strong> finanzieren Sie einen Platz. Sie bestimmen Rhythmus und Umfang.</p>
                       </div>
                   </div>
-
-                  <!-- CTA unten -->
-                  <div class="stories_cta">
-                      <p>
-                          Unterstützen Sie gezielt Familien mit kleinem Einkommen<br>
-                          und machen Sie Bildung für alle möglich.
-                          <a href="#bildungspate"><strong>Bildungspate werden!</strong></a>
-                      </p>
+                  <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                      <div class="patenschaft-feature">
+                          <div class="patenschaft-feature__icon">📊</div>
+                          <h3 class="patenschaft-feature__title">Transparenz</h3>
+                          <p class="patenschaft-feature__text">Wir zeigen Ihnen transparent, wie Ihre Unterstützung eingesetzt wird und welche Wirkung sie entfaltet.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                      <div class="patenschaft-feature">
+                          <div class="patenschaft-feature__icon">🏆</div>
+                          <h3 class="patenschaft-feature__title">Anerkennung</h3>
+                          <p class="patenschaft-feature__text">Auf Wunsch nennen wir Sie öffentlich als Bildungspaten auf unserer Website und in der Presse.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                      <div class="patenschaft-feature">
+                          <div class="patenschaft-feature__icon">🎓</div>
+                          <h3 class="patenschaft-feature__title">Bildung ermöglichen</h3>
+                          <p class="patenschaft-feature__text">Zugang zu Nachhilfe- und Hausaufgabenprogramm bei Studyfriends GmbH für benachteiligte Kinder.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                      <div class="patenschaft-feature">
+                          <div class="patenschaft-feature__icon">❤️</div>
+                          <h3 class="patenschaft-feature__title">Ohne Umwege</h3>
+                          <p class="patenschaft-feature__text">Ihr Beitrag kommt direkt dort an, wo er gebraucht wird – für eine bessere Zukunft.</p>
+                      </div>
                   </div>
               </div>
+
+              <!-- CTA Box -->
+              <div class="patenschaft-cta-box" data-aos="zoom-in" data-aos-delay="200">
+                  <h3>Bereit, Leben zu verändern?</h3>
+                  <p>Werden Sie Teil unserer Mission und ermöglichen Sie Bildung für alle.</p>
+                  <a href="/#kontakt" class="btn-hero-cta">Jetzt Bildungspate werden</a>
+              </div>
+
+              <!-- Erfolgsgeschichten -->
+              <div class="success-stories-section mt-5">
+                  <div class="section-header text-center" data-aos="fade-up">
+                      <div style="display: inline-block; background: linear-gradient(135deg, #270b60 0%, #dbc64c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">
+                          Echte Erfolge
+                      </div>
+                      <h2 style="font-size: 36px; font-weight: 700; color: #1a1a1a; margin-bottom: 50px;">
+                          Das haben wir gemeinsam erreicht
+                      </h2>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-delay="100">
+                          <div class="success-card">
+                              <div class="success-card__icon">✨</div>
+                              <div class="success-card__content">
+                                  <h4 class="success-card__name">Lena, 13 Jahre</h4>
+                                  <p class="success-card__text">hat wieder Freude am Lernen – dank eines Bildungspaten aus Bad Lippspringe.</p>
+                                  <div class="success-card__location">📍 Bad Lippspringe</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-delay="100">
+                          <div class="success-card">
+                              <div class="success-card__icon">🎓</div>
+                              <div class="success-card__content">
+                                  <h4 class="success-card__name">Danilo, 15 Jahre</h4>
+                                  <p class="success-card__text">hat den Realschulabschluss geschafft – dank eines Bildungspaten aus Schlangen.</p>
+                                  <div class="success-card__location">📍 Schlangen</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-delay="200">
+                          <div class="success-card">
+                              <div class="success-card__icon">💪</div>
+                              <div class="success-card__content">
+                                  <h4 class="success-card__name">Amina, 7 Jahre</h4>
+                                  <p class="success-card__text">erledigt jetzt stolz selbstständig Hausaufgaben – dank eines Bildungspaten aus Bad Lippspringe.</p>
+                                  <div class="success-card__location">📍 Bad Lippspringe</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-delay="200">
+                          <div class="success-card">
+                              <div class="success-card__icon">🌟</div>
+                              <div class="success-card__content">
+                                  <h4 class="success-card__name">Fatima, 17 Jahre</h4>
+                                  <p class="success-card__text">hat am Berufskolleg den höheren Abschluss erworben – dank eines Bildungspaten aus Bad Lippspringe.</p>
+                                  <div class="success-card__location">📍 Bad Lippspringe</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
           </div>
       </section>
       <!-- Patenschaft Section End -->
@@ -524,29 +569,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <!--Newsletter Bereich Ende -->
 
       <!-- Contact Section Start -->
-      <section class="section section--contact" id="contact">
+      <section class="section section--bg-dark" id="contact">
           <div class="container">
               <div class="section-header">
                   <h1 class="touch_text">Kontaktieren Sie uns</h1>
+                  <p style="color: #b0b0b0; text-align: center; font-size: 18px; margin-bottom: 40px;">Wir freuen uns auf Ihre Nachricht und melden uns schnellstmöglich bei Ihnen.</p>
               </div>
               <div class="section-content">
                   <div class="email_box">
                       <div class="input_main">
                           <form action="" method="POST">
                               <div class="form-group">
-                                  <input type="text" class="email-bt form-control" placeholder="Name" name="Name" required>
+                                  <input type="text" class="email-bt form-control" placeholder="Ihr Name" name="Name" required>
                               </div>
                               <div class="form-group">
-                                  <input type="text" class="email-bt form-control" placeholder="Telefon" name="Phone" required>
+                                  <input type="text" class="email-bt form-control" placeholder="Ihre Telefonnummer" name="Phone" required>
                               </div>
                               <div class="form-group">
-                                  <input type="email" class="email-bt form-control" placeholder="E-Mail" name="Email" required>
+                                  <input type="email" class="email-bt form-control" placeholder="Ihre E-Mail-Adresse" name="Email" required>
                               </div>
                               <div class="form-group">
-                                  <textarea class="massage-bt form-control" placeholder="Nachricht" rows="5" id="comment" name="Massage" required></textarea>
+                                  <textarea class="massage-bt form-control" placeholder="Ihre Nachricht an uns..." rows="5" id="comment" name="Massage" required></textarea>
                               </div>
                               <div class="send_bt">
-                                  <button type="submit" class="btn-success-custom">Senden</button>
+                                  <button type="submit" class="btn-success-custom">Nachricht senden</button>
                               </div>
                           </form>
                           <!-- Erfolg- oder Fehlermeldung anzeigen -->
@@ -556,12 +602,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                   <div class="call_main">
                       <div class="call_text">
-                          <img src="images/call-icon.png">
-                          <span class="padding_left_15">+49 159 06377920</span>
+                          <img src="images/call-icon.png" alt="Telefon">
+                          <span>+49 159 06377920</span>
                       </div>
                       <div class="call_text">
-                          <img src="images/mail-icon.png">
-                          <span class="padding_left_15">info@chancenschmiede.com</span>
+                          <img src="images/mail-icon.png" alt="E-Mail">
+                          <span>info@chancenschmiede.com</span>
                       </div>
                   </div>
 
@@ -671,6 +717,92 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+      <!-- AOS Animation Library -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+      <script>
+      // Initialize AOS
+      AOS.init({
+         duration: 800,
+         easing: 'ease-in-out',
+         once: true,
+         mirror: false
+      });
+
+      // Typing Animation for Hero Text
+      const typingText = document.getElementById('typingText');
+      const text = 'Wir geben Kindern faire Bildungschancen – auch bei finanziellen Hürden.';
+      let index = 0;
+
+      function typeText() {
+         if (index < text.length) {
+            typingText.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeText, 50);
+         }
+      }
+
+      // Start typing after page load
+      window.addEventListener('load', function() {
+         setTimeout(typeText, 500);
+      });
+
+      // Counter Animation
+      function animateCounter(element) {
+         const target = parseInt(element.getAttribute('data-target'));
+         const duration = 2000;
+         const increment = target / (duration / 16);
+         let current = 0;
+
+         const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+               element.textContent = Math.floor(current);
+               requestAnimationFrame(updateCounter);
+            } else {
+               element.textContent = target;
+            }
+         };
+
+         updateCounter();
+      }
+
+      // Intersection Observer for Counter
+      const counterObserver = new IntersectionObserver((entries) => {
+         entries.forEach(entry => {
+            if (entry.isIntersecting) {
+               animateCounter(entry.target);
+               counterObserver.unobserve(entry.target);
+            }
+         });
+      }, { threshold: 0.5 });
+
+      document.querySelectorAll('.counter').forEach(counter => {
+         counterObserver.observe(counter);
+      });
+
+      // Card Tilt Effect
+      document.querySelectorAll('.card-tilt').forEach(card => {
+         card.addEventListener('mousemove', function(e) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+         });
+
+         card.addEventListener('mouseleave', function() {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+         });
+      });
+      </script>
    </body>
 </html>
 
