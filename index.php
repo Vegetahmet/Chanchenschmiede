@@ -35,72 +35,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = "<div class='message-error'>Bitte füllen Sie alle Felder aus.</div>";
     }
 }
+// Page Meta Information
+$page_title = "Chancenschmiede - Faire Bildungschancen für alle Kinder";
+$page_description = "Chancen für eine bessere Zukunft.";
+$page_keywords = "Nachhilfe, Bildung, Förderung, Bildungspate";
 ?>
 
+<?php include 'includes/header.php'; ?>
 
-
-
-<!DOCTYPE html>
-<html lang="de">
-   <head>
-      <!-- Grundlegende Meta-Tags -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Website-Metas -->
-      <title>Chancenschmiede</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="Chancen für eine bessere Zukunft.">
-      <meta name="author" content="">
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-      <!-- Stil CSS -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <!-- Responsive CSS -->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- Favicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Scrollbar CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <!-- Owl Stylesheets -->
-      <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <!-- AOS Animation Library -->
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   </head>
-   <body>
-      <!--header section start -->
-      <div class="header_section">
-         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div >
-   <a href="index.php"><img src="images/logo.png" alt="Logo" class="logo-img"></a>
-</div>               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigation umschalten">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto w-100">
-                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Startseite</a>
-                     </li>
-                     <li class="nav-item">
-                     <a class="nav-link" href="#aboutus">Über Uns</a>
-                     </li>
-           
-                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Kontakt</a>
-                     </li>
-                     <li class="nav-item ml-auto">
-                        <a class="nav-link btn-success-custom btn-small" href="contact.php">Probestunde</a>
-                     </li>
-                  </ul>
-                
-               </div>
-            </nav>
-         </div>
          <!--banner section start -->
          <div class="banner_section layout_padding">
             <div class="container">
@@ -112,8 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="read_bt"><a href="contact.php" class="btn-hero-cta">Jetzt Termin vereinbaren</a></div>
 
                      </div>
-               
-           
+
+
                   </div>
                </div>
             </div>
@@ -203,48 +145,88 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <!-- Support Section End -->
 
       <!-- Features Icons Section Start -->
-      <section class="section section--bg-white">
+      <section class="section section--bg-white section--education">
           <div class="container">
-              <div class="section-header">
-                  <h1 class="section-header__title">Bildung und Unterstützung</h1>
-                  <h1 class="section-header__subtitle">für Kinder und Jugendliche, die eine Perspektive brauchen</h1>
+              <div class="education-hero" data-aos="fade-up">
+                  <div class="education-hero__badge">📚 Unsere Leistungen</div>
+                  <h2 class="education-hero__title">
+                      Bildung und Unterstützung
+                  </h2>
+                  <p class="education-hero__subtitle">für Kinder und Jugendliche, die eine Perspektive brauchen</p>
               </div>
-              <div class="section-content">
-                  <div class="row">
-                      <div class="col-lg-3 col-sm-6 mb-4">
-                          <div class="card card--yellow">
-                              <div class="card__icon-wrapper">
-                                  <img src="images/icon-1.png" class="card__icon-img">
-                              </div>
-                              <h6 class="card__title">Flexibler<br>Unterricht</h6>
-                          </div>
-                      </div>
-                      <div class="col-lg-3 col-sm-6 mb-4">
-                          <div class="card card--yellow">
-                              <div class="card__icon-wrapper">
-                                  <img src="images/icon-2.png" class="card__icon-img">
-                              </div>
-                              <h6 class="card__title">Individuelle<br>Lernpläne</h6>
-                          </div>
-                      </div>
-                      <div class="col-lg-3 col-sm-6 mb-4">
-                          <div class="card card--yellow">
-                              <div class="card__icon-wrapper">
-                                  <img src="images/icon-3.png" class="card__icon-img">
-                              </div>
-                              <h6 class="card__title">Zugriff auf<br>Online-Lernplattform</h6>
-                          </div>
-                      </div>
-                      <div class="col-lg-3 col-sm-6 mb-4">
-                          <div class="card card--yellow">
-                              <div class="card__icon-wrapper">
-                                  <img src="images/icon-4.png" class="card__icon-img">
-                              </div>
-                              <h6 class="card__title">Erfahrene<br>Nachhilfelehrer</h6>
+
+              <!-- Split Layout: Image + Content -->
+              <div class="row align-items-center mb-5">
+                  <div class="col-lg-6" data-aos="fade-right">
+                      <div class="education-image-wrapper">
+                          <img src="images/img-6.png" alt="Flexibler Unterricht" class="education-main-image">
+                          <div class="education-float-badge">
+                              <span class="education-float-badge__number">01</span>
+                              <span class="education-float-badge__text">Flexibilität</span>
                           </div>
                       </div>
                   </div>
+                  <div class="col-lg-6" data-aos="fade-left">
+                      <div class="education-content">
+                          <div class="education-content__icon">
+                              <img src="images/icon-1.png" alt="Icon">
+                          </div>
+                          <h3 class="education-content__title">Flexibler Unterricht</h3>
+                          <p class="education-content__text">
+                              Unterricht, der sich an die Bedürfnisse Ihres Kindes anpasst. Ob online oder vor Ort,
+                              wir finden die passende Lösung für individuellen Erfolg.
+                          </p>
+                          <ul class="education-list">
+                              <li><span class="education-list__icon">✓</span> Online & Präsenzunterricht</li>
+                              <li><span class="education-list__icon">✓</span> Flexible Terminplanung</li>
+                              <li><span class="education-list__icon">✓</span> Anpassbare Lernintensität</li>
+                          </ul>
+                      </div>
+                  </div>
               </div>
+
+              <!-- Timeline Style -->
+              <div class="education-timeline" data-aos="fade-up">
+                  <div class="education-timeline-item education-timeline-item--left">
+                      <div class="education-timeline-item__marker">
+                          <img src="images/icon-2.png" alt="Icon">
+                      </div>
+                      <div class="education-timeline-item__content">
+                          <h4 class="education-timeline-item__title">Individuelle Lernpläne</h4>
+                          <p class="education-timeline-item__text">
+                              Jedes Kind lernt anders. Wir erstellen maßgeschneiderte Lernpläne,
+                              die auf die Stärken und Schwächen Ihres Kindes abgestimmt sind.
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="education-timeline-item education-timeline-item--right">
+                      <div class="education-timeline-item__marker">
+                          <img src="images/icon-3.png" alt="Icon">
+                      </div>
+                      <div class="education-timeline-item__content">
+                          <h4 class="education-timeline-item__title">Zugriff auf Online-Lernplattform</h4>
+                          <p class="education-timeline-item__text">
+                              Moderne digitale Tools unterstützen den Lernprozess. Übungen, Videos und
+                              interaktive Inhalte stehen jederzeit zur Verfügung.
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="education-timeline-item education-timeline-item--left">
+                      <div class="education-timeline-item__marker">
+                          <img src="images/icon-4.png" alt="Icon">
+                      </div>
+                      <div class="education-timeline-item__content">
+                          <h4 class="education-timeline-item__title">Erfahrene Nachhilfelehrer</h4>
+                          <p class="education-timeline-item__text">
+                              Qualifizierte Lehrkräfte mit pädagogischer Erfahrung begleiten Ihr Kind
+                              auf dem Weg zum schulischen Erfolg – mit Geduld und Kompetenz.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+
           </div>
       </section>
       <!-- Features Icons Section End -->
@@ -551,7 +533,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <div class="patenschaft-cta-box" data-aos="zoom-in" data-aos-delay="200">
                   <h3>Bereit, Leben zu verändern?</h3>
                   <p>Werden Sie Teil unserer Mission und ermöglichen Sie Bildung für alle.</p>
-                  <a href="/#kontakt" class="btn-hero-cta">Jetzt Bildungspate werden</a>
+                  <a href="bildungspate.php" class="btn-hero-cta">Jetzt Bildungspate werden</a>
               </div>
 
               <!-- Erfolgsgeschichten -->

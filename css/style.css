@@ -318,6 +318,10 @@ button {
   color: #fdfcfc;
   font-weight: bold;
   text-align: center;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner_text {
@@ -2143,6 +2147,664 @@ textarea#comment::placeholder {
 .section--patenschaft-modern {
   background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
   padding: 80px 0;
+}
+
+/* Education Section */
+.section--education {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.education-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.education-hero__badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #dbc64c 0%, #e0ce64 100%);
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #270b60;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(219, 198, 76, 0.3);
+}
+
+.education-hero__title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.education-hero__subtitle {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+/* Split Layout */
+.education-image-wrapper {
+  position: relative;
+  padding: 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.education-image-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.education-main-image {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.education-float-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #270b60 0%, #3a1570 100%);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(39, 11, 96, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.education-float-badge__number {
+  font-size: 24px;
+  font-weight: 700;
+  color: #dbc64c;
+}
+
+.education-float-badge__text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.education-content {
+  padding-left: 30px;
+}
+
+.education-content__icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #98FB98 0%, #90EE90 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(152, 251, 152, 0.3);
+}
+
+.education-content__icon img {
+  width: 35px;
+  height: auto;
+}
+
+.education-content__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.education-content__text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.education-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  padding: 10px 0;
+}
+
+.education-list__icon {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #98FB98 0%, #90EE90 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #270b60;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Timeline */
+.education-timeline {
+  position: relative;
+  padding: 40px 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #dbc64c 0%, #98FB98 100%);
+  transform: translateX(-50%);
+}
+
+.education-timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.education-timeline-item--left {
+  flex-direction: row;
+}
+
+.education-timeline-item--right {
+  flex-direction: row-reverse;
+}
+
+.education-timeline-item__marker {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 4px solid #dbc64c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  margin: 0 30px;
+}
+
+.education-timeline-item__marker img {
+  width: 40px;
+  height: auto;
+}
+
+.education-timeline-item__content {
+  flex: 1;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #98FB98;
+  transition: all 0.3s ease;
+}
+
+.education-timeline-item--right .education-timeline-item__content {
+  border-left: none;
+  border-right: 4px solid #98FB98;
+}
+
+.education-timeline-item__content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.education-timeline-item__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.education-timeline-item__text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .education-hero__title {
+    font-size: 32px;
+  }
+
+  .education-content {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .education-timeline::before {
+    left: 40px;
+  }
+
+  .education-timeline-item,
+  .education-timeline-item--right {
+    flex-direction: row;
+  }
+
+  .education-timeline-item__marker {
+    margin: 0 20px 0 0;
+  }
+
+  .education-timeline-item__content {
+    border-left: 4px solid #98FB98;
+    border-right: none;
+  }
+}
+
+/* ===== Bildungspate Page Styles ===== */
+
+/* Hero Section */
+.pate-hero {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 100px 0 80px;
+  overflow: hidden;
+}
+
+.pate-hero__badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #98FB98 0%, #90EE90 100%);
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #270b60;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(152, 251, 152, 0.3);
+}
+
+.pate-hero__title {
+  font-size: 52px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.pate-hero__text {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.pate-hero__stats {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.pate-stat {
+  text-align: center;
+}
+
+.pate-stat__number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #270b60;
+  margin-bottom: 5px;
+}
+
+.pate-stat__label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.pate-hero__image {
+  position: relative;
+  text-align: center;
+}
+
+.pate-hero__image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.pate-hero__floating-badge {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #dbc64c 0%, #e0ce64 100%);
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(219, 198, 76, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.pate-hero__floating-icon {
+  font-size: 28px;
+}
+
+.pate-hero__floating-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #270b60;
+}
+
+/* Benefits Section */
+.pate-benefits {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.pate-section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pate-section-header__title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.pate-section-header__subtitle {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+.pate-benefit-card {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.pate-benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: #98FB98;
+}
+
+.pate-benefit-card__icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.pate-benefit-card__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.pate-benefit-card__text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Form Section */
+.pate-form-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #270b60 0%, #3a1570 100%);
+}
+
+.pate-form-wrapper {
+  background: rgba(255, 255, 255, 0.98);
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.pate-form-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pate-form-header__icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.pate-form-header__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.pate-form-header__text {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.pate-form__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.pate-form__input,
+.pate-form__textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.pate-form__input:focus,
+.pate-form__textarea:focus {
+  border-color: #98FB98;
+  box-shadow: 0 0 0 3px rgba(152, 251, 152, 0.2);
+  outline: none;
+}
+
+.pate-form__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.pate-form__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f9fa;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.pate-form__info-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.pate-form__info-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.btn-pate-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 50px;
+  background: linear-gradient(135deg, #98FB98 0%, #90EE90 100%);
+  color: #270b60;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(152, 251, 152, 0.4);
+}
+
+.btn-pate-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(152, 251, 152, 0.5);
+  background: linear-gradient(135deg, #90EE90 0%, #98FB98 100%);
+}
+
+.btn-pate-submit__icon {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.btn-pate-submit:hover .btn-pate-submit__icon {
+  transform: translateX(5px);
+}
+
+/* Impact Section */
+.pate-impact {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.pate-impact-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  border-top: 4px solid #dbc64c;
+}
+
+.pate-impact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.pate-impact-card__number {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #270b60 0%, #dbc64c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.pate-impact-card__label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.pate-impact-card__description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Alert Messages */
+.alert {
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.alert-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pate-hero {
+    padding: 60px 0 40px;
+  }
+
+  .pate-hero__title {
+    font-size: 36px;
+  }
+
+  .pate-hero__text {
+    font-size: 16px;
+  }
+
+  .pate-hero__stats {
+    justify-content: center;
+  }
+
+  .pate-hero__image {
+    margin-top: 40px;
+  }
+
+  .pate-hero__floating-badge {
+    bottom: 10px;
+    right: 10px;
+    padding: 15px 20px;
+  }
+
+  .pate-section-header__title {
+    font-size: 32px;
+  }
+
+  .pate-form-wrapper {
+    padding: 35px 25px;
+  }
+
+  .pate-form-header__title {
+    font-size: 28px;
+  }
+
+  .btn-pate-submit {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Patenschaft Hero */

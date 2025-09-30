@@ -38,65 +38,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errorMessage = "Fehler beim Versenden der Nachricht. Bitte versuchen Sie es später erneut.";
     }
 }
+
+// Page Meta Information
+$page_title = "Probestunde vereinbaren - Chancenschmiede";
+$page_description = "Vereinbaren Sie eine kostenlose Probestunde für Ihr Kind";
+$page_keywords = "Probestunde, Nachhilfe, Termin, Kontakt";
 ?>
 
-<!DOCTYPE html>
-<html lang="de">
-<head>
-      <!-- Grundlegende Meta-Tags -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Website-Metas -->
-      <title>Chancenschmiede Kontakt</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="Dein Nachhilfe Unternehmen.Dein Erfolg.">
-      <meta name="author" content="">
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-      <!-- Stil CSS -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <!-- Responsive CSS -->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- Favicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Scrollbar CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <!-- Owl Stylesheets -->
-      <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-   </head>
-   <body>
-      <!--header section start -->
-      <div class="header_section" style="background-image:none !important">
-         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div >
-   <a href="index.php"><img src="images/logo.png" alt="Logo" class="logo-img"></a>
-</div>     
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigation umschalten">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Startseite</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="index.php#aboutus">Über Uns</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="index.php#contact">Kontakt</a>
-                     </li>
-                  </ul>
-               </div>
-            </nav>
-         </div>
-      </div>
-      <!--header section end -->
+<?php include 'includes/header.php'; ?>
 
       <!-- Termin vereinbaren section start -->
       <div class="appointment_section">
