@@ -32,11 +32,13 @@
    <body>
       <!-- Loader -->
       <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+         <div class="loader">
+            <div class="spinner"></div>
+         </div>
       </div>
 
       <!--header section start -->
-      <div class="header_section">
+      <div class="header_section <?php echo (basename($_SERVER['PHP_SELF']) == 'bildungspate.php' || basename($_SERVER['PHP_SELF']) == 'contact.php') ? 'header_section--no-bg' : ''; ?>">
          <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                <div>
@@ -51,7 +53,7 @@
                         <a class="nav-link" href="index.php">Startseite</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="index.php#aboutus">Über Uns</a>
+                        <a class="nav-link" href="index.php#zielgruppe">Über Uns</a>
                      </li>
                      <li class="nav-item <?php echo (basename($_SERVER['PHP_SELF']) == 'bildungspate.php') ? 'active' : ''; ?>">
                         <a class="nav-link" href="bildungspate.php">Bildungspate werden</a>

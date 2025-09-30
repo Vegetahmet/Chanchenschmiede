@@ -35,143 +35,53 @@ $page_keywords = "Bildungspate, Spende, Nachhilfe, Förderung";
 
 <?php include 'includes/header.php'; ?>
 
-    <!-- Hero Section -->
-    <section class="pate-hero">
+    <!-- Hero Section - Full Width -->
+    <section class="pate-hero-full">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="pate-hero__badge">💚 Machen Sie den Unterschied</div>
-                    <h1 class="pate-hero__title">
-                        Werden Sie <span class="gradient-text">Bildungspate</span>
-                    </h1>
-                    <p class="pate-hero__text">
-                        Mit Ihrer Unterstützung ermöglichen Sie Kindern aus einkommensschwachen Familien
-                        den Zugang zu professioneller Nachhilfe und eine echte Chance auf Bildungserfolg.
-                    </p>
-                    <div class="pate-hero__stats">
-                        <div class="pate-stat">
-                            <div class="pate-stat__number">150+</div>
-                            <div class="pate-stat__label">Geförderte Kinder</div>
-                        </div>
-                        <div class="pate-stat">
-                            <div class="pate-stat__number">50+</div>
-                            <div class="pate-stat__label">Aktive Paten</div>
-                        </div>
-                        <div class="pate-stat">
-                            <div class="pate-stat__number">95%</div>
-                            <div class="pate-stat__label">Erfolgsquote</div>
-                        </div>
+            <div class="text-center" data-aos="fade-up">
+                <div class="pate-hero__badge">💚 Machen Sie den Unterschied</div>
+                <h1 class="pate-hero__title">
+                    Werden Sie <span class="gradient-text">Bildungspate</span>
+                </h1>
+                <p class="pate-hero__subtitle">
+                    Mit Ihrer Unterstützung ermöglichen Sie Kindern aus einkommensschwachen Familien faire Bildungschancen
+                </p>
+
+                <div class="pate-hero__stats-row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pate-stat-inline">
+                        <div class="pate-stat-inline__number">150+</div>
+                        <div class="pate-stat-inline__label">Geförderte Kinder</div>
                     </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="pate-hero__image">
-                        <img src="images/img-1.png" alt="Bildungspate werden">
-                        <div class="pate-hero__floating-badge">
-                            <span class="pate-hero__floating-icon">❤️</span>
-                            <span class="pate-hero__floating-text">Schon ab 60€/Monat</span>
-                        </div>
+                    <div class="pate-stat-inline">
+                        <div class="pate-stat-inline__number">50+</div>
+                        <div class="pate-stat-inline__label">Aktive Paten</div>
+                    </div>
+                    <div class="pate-stat-inline">
+                        <div class="pate-stat-inline__number">95%</div>
+                        <div class="pate-stat-inline__label">Erfolgsquote</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="pate-benefits">
-        <div class="container">
-            <div class="pate-section-header" data-aos="fade-up">
-                <h2 class="pate-section-header__title">Was bedeutet es, Bildungspate zu sein?</h2>
-                <p class="pate-section-header__subtitle">Als Bildungspate investieren Sie in die Zukunft eines Kindes</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="pate-benefit-card">
-                        <div class="pate-benefit-card__icon">📚</div>
-                        <h3 class="pate-benefit-card__title">Direkte Wirkung</h3>
-                        <p class="pate-benefit-card__text">
-                            Ihre Spende fließt zu 100% in die Nachhilfe und Förderung von Kindern,
-                            die sich diese sonst nicht leisten könnten.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="pate-benefit-card">
-                        <div class="pate-benefit-card__icon">🎯</div>
-                        <h3 class="pate-benefit-card__title">Transparenz</h3>
-                        <p class="pate-benefit-card__text">
-                            Sie erhalten regelmäßige Updates über die Fortschritte und Erfolge
-                            der geförderten Kinder (anonymisiert).
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="pate-benefit-card">
-                        <div class="pate-benefit-card__icon">💚</div>
-                        <h3 class="pate-benefit-card__title">Flexibilität</h3>
-                        <p class="pate-benefit-card__text">
-                            Bestimmen Sie selbst die Höhe Ihres monatlichen Beitrags –
-                            jeder Betrag hilft und macht einen Unterschied.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="pate-benefit-card">
-                        <div class="pate-benefit-card__icon">🏆</div>
-                        <h3 class="pate-benefit-card__title">Langfristige Unterstützung</h3>
-                        <p class="pate-benefit-card__text">
-                            Ihre kontinuierliche Förderung ermöglicht nachhaltige Bildungserfolge
-                            und eine bessere Zukunft.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="pate-benefit-card">
-                        <div class="pate-benefit-card__icon">🌟</div>
-                        <h3 class="pate-benefit-card__title">Anerkennung</h3>
-                        <p class="pate-benefit-card__text">
-                            Auf Wunsch nennen wir Sie öffentlich als Bildungspate
-                            auf unserer Website (optional).
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
-                    <div class="pate-benefit-card">
-                        <div class="pate-benefit-card__icon">🎓</div>
-                        <h3 class="pate-benefit-card__title">Bildungsgerechtigkeit</h3>
-                        <p class="pate-benefit-card__text">
-                            Sie helfen, die Bildungsschere zu schließen und allen Kindern
-                            faire Chancen zu geben.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section class="pate-form-section">
+    <!-- Form Section - Centered -->
+    <section class="pate-form-main">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="pate-form-wrapper" data-aos="zoom-in">
-                        <div class="pate-form-header">
-                            <div class="pate-form-header__icon">✨</div>
-                            <h2 class="pate-form-header__title">Jetzt Bildungspate werden</h2>
-                            <p class="pate-form-header__text">
-                                Füllen Sie das Formular aus und wir melden uns zeitnah bei Ihnen,
-                                um die nächsten Schritte zu besprechen.
+                <div class="col-lg-9 col-xl-8" data-aos="zoom-in">
+                    <div class="pate-form-box">
+                        <div class="pate-form-box__header">
+                            <div class="pate-form-box__icon">✨</div>
+                            <h2 class="pate-form-box__title">Jetzt Bildungspate werden</h2>
+                            <p class="pate-form-box__subtitle">
+                                Füllen Sie das Formular aus und wir melden uns zeitnah bei Ihnen
                             </p>
                         </div>
 
                         <?php echo $message; ?>
 
-                        <form method="POST" action="" class="pate-form">
+                        <form method="POST" action="" class="pate-form-box__form">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -210,23 +120,103 @@ $page_keywords = "Bildungspate, Spende, Nachhilfe, Förderung";
 
                             <div class="form-group">
                                 <label class="pate-form__label">Ihre Nachricht (optional)</label>
-                                <textarea name="nachricht" class="pate-form__textarea" rows="5" placeholder="Teilen Sie uns mit, warum Sie Bildungspate werden möchten oder ob Sie noch Fragen haben..."></textarea>
+                                <textarea name="nachricht" class="pate-form__textarea" rows="4" placeholder="Teilen Sie uns mit, warum Sie Bildungspate werden möchten..."></textarea>
                             </div>
 
-                            <div class="pate-form__info">
-                                <span class="pate-form__info-icon">ℹ️</span>
-                                <span class="pate-form__info-text">
-                                    Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
-                                </span>
+                            <div class="pate-form-box__info">
+                                <span class="pate-form-box__info-icon">🔒</span>
+                                <span>Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben</span>
                             </div>
 
-                            <div class="text-center">
-                                <button type="submit" class="btn-pate-submit">
-                                    <span>Jetzt Bildungspate werden</span>
-                                    <span class="btn-pate-submit__icon">→</span>
-                                </button>
-                            </div>
+                            <button type="submit" class="btn-pate-submit-full">
+                                <span>Jetzt Bildungspate werden</span>
+                                <span class="btn-pate-submit__icon">→</span>
+                            </button>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section - 3 Columns -->
+    <section class="pate-benefits-grid">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="pate-benefits-grid__title">Warum Bildungspate werden?</h2>
+                <p class="pate-benefits-grid__subtitle">Als Bildungspate investieren Sie direkt in die Zukunft eines Kindes</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">📚</div>
+                        <h3 class="benefit-card__title">Direkte Wirkung</h3>
+                        <p class="benefit-card__text">
+                            Ihre Spende fließt zu 100% in die Nachhilfe und Förderung von Kindern, die sich diese sonst nicht leisten könnten.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">🎯</div>
+                        <h3 class="benefit-card__title">Transparenz</h3>
+                        <p class="benefit-card__text">
+                            Sie erhalten regelmäßige Updates über die Fortschritte und Erfolge der geförderten Kinder.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">💚</div>
+                        <h3 class="benefit-card__title">Flexibilität</h3>
+                        <p class="benefit-card__text">
+                            Bestimmen Sie selbst die Höhe Ihres monatlichen Beitrags – jeder Betrag hilft und macht einen Unterschied.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">🏆</div>
+                        <h3 class="benefit-card__title">Langfristige Unterstützung</h3>
+                        <p class="benefit-card__text">
+                            Ihre kontinuierliche Förderung ermöglicht nachhaltige Bildungserfolge und eine bessere Zukunft.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">🌟</div>
+                        <h3 class="benefit-card__title">Anerkennung</h3>
+                        <p class="benefit-card__text">
+                            Auf Wunsch nennen wir Sie öffentlich als Bildungspate auf unserer Website und in der Presse.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">🎓</div>
+                        <h3 class="benefit-card__title">Bildungsgerechtigkeit</h3>
+                        <p class="benefit-card__text">
+                            Sie helfen, die Bildungsschere zu schließen und allen Kindern faire Chancen zu geben.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8" data-aos="zoom-in">
+                    <div class="pate-cta-box">
+                        <div class="pate-cta-box__icon">💰</div>
+                        <div class="pate-cta-box__content">
+                            <div class="pate-cta-box__title">Schon ab 60€ pro Monat</div>
+                            <div class="pate-cta-box__text">können Sie einem Kind den Zugang zu Bildung ermöglichen</div>
+                        </div>
                     </div>
                 </div>
             </div>

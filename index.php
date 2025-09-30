@@ -232,7 +232,7 @@ $page_keywords = "Nachhilfe, Bildung, Förderung, Bildungspate";
       <!-- Features Icons Section End -->
 
       <!-- Target Group Section Start -->
-      <section class="section section--target-modern">
+      <section id="zielgruppe" class="section section--target-modern">
           <div class="container">
               <!-- Hero Header -->
               <div class="target-hero" data-aos="fade-up">
@@ -319,25 +319,35 @@ $page_keywords = "Nachhilfe, Bildung, Förderung, Bildungspate";
       </section>
       <!-- Target Group Section End -->
       <!-- Donation Section Start -->
-      <section class="section section--bg-primary section--medium-padding" id="aboutus">
+      <section class="donation-section" id="aboutus">
           <div class="container">
-              <div class="section-header">
-                  <h2 class="section-header__title--white">Unterstützen Sie uns</h2>
-                  <p class="section-header__text--white">Wählen Sie aus, wie Sie uns unterstützen möchten:</p>
+              <div class="donation-hero" data-aos="fade-up">
+                  <div class="donation-hero__badge">💝 Jetzt spenden</div>
+                  <h2 class="donation-hero__title">
+                      Gemeinsam <span class="gradient-text">Bildung ermöglichen</span>
+                  </h2>
+                  <p class="donation-hero__text">
+                      Ihre Spende macht den Unterschied. Helfen Sie uns, Kindern faire Bildungschancen zu geben – unabhängig von ihren finanziellen Möglichkeiten.
+                  </p>
               </div>
-              <div class="section-content">
+
+              <div class="donation-content" data-aos="zoom-in">
                   <!-- Buttons -->
-                  <div class="d-flex justify-content-center mb-4">
-                      <button id="btnPrivat" class="btn btn-outline-light px-4 me-2">
-                          Privatperson
+                  <div class="donation-tabs">
+                      <button id="btnPrivat" class="donation-tab">
+                          <span class="donation-tab__icon">👤</span>
+                          <span class="donation-tab__text">Privatperson</span>
                       </button>
-                      <button id="btnGewerbe" class="btn btn-light px-4 fw-bold active">
-                          Gewerbe
+                      <button id="btnGewerbe" class="donation-tab donation-tab--active">
+                          <span class="donation-tab__icon">🏢</span>
+                          <span class="donation-tab__text">Gewerbe</span>
                       </button>
                   </div>
 
                   <!-- Twingle-Widget -->
-                  <div id="twingleEmbedContainer" class="text-center" style="min-height:300px;"></div>
+                  <div class="donation-widget">
+                      <div id="twingleEmbedContainer"></div>
+                  </div>
               </div>
           </div>
       </section>
@@ -373,18 +383,14 @@ $page_keywords = "Nachhilfe, Bildung, Förderung, Bildungspate";
 
   // Button-Klicks
   btnPrivat.addEventListener("click", function () {
-    btnPrivat.classList.add("btn-light", "fw-bold", "active");
-    btnPrivat.classList.remove("btn-outline-light");
-    btnGewerbe.classList.remove("btn-light", "fw-bold", "active");
-    btnGewerbe.classList.add("btn-outline-light");
+    btnPrivat.classList.add("donation-tab--active");
+    btnGewerbe.classList.remove("donation-tab--active");
     loadTwingle(LINKS.privat);
   });
 
   btnGewerbe.addEventListener("click", function () {
-    btnGewerbe.classList.add("btn-light", "fw-bold", "active");
-    btnGewerbe.classList.remove("btn-outline-light");
-    btnPrivat.classList.remove("btn-light", "fw-bold", "active");
-    btnPrivat.classList.add("btn-outline-light");
+    btnGewerbe.classList.add("donation-tab--active");
+    btnPrivat.classList.remove("donation-tab--active");
     loadTwingle(LINKS.gewerbe);
   });
 

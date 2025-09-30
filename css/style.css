@@ -271,6 +271,11 @@ button {
   background-size: 100%;
 }
 
+.header_section--no-bg {
+  background-image: none !important;
+  background-color: #f8f9fa;
+}
+
 .logo {
   width: 35%;
   float: left;
@@ -2420,7 +2425,54 @@ textarea#comment::placeholder {
 
 /* ===== Bildungspate Page Styles ===== */
 
-/* Hero Section */
+/* Hero Section - Full Width */
+.pate-hero-full {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 80px 0 60px;
+  text-align: center;
+}
+
+/* Hero Section - Compact */
+.pate-hero-compact {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.pate-hero__subtitle {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pate-hero__stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.pate-stat-inline {
+  text-align: center;
+}
+
+.pate-stat-inline__number {
+  font-size: 42px;
+  font-weight: 700;
+  color: #270b60;
+  margin-bottom: 8px;
+}
+
+.pate-stat-inline__label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Hero Section - Old */
 .pate-hero {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   padding: 100px 0 80px;
@@ -2576,6 +2628,319 @@ textarea#comment::placeholder {
   color: #666;
   line-height: 1.7;
   margin: 0;
+}
+
+/* Form Section - Main */
+.pate-form-main {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #270b60 0%, #3a1570 100%);
+}
+
+.pate-form-box {
+  background: rgba(255, 255, 255, 0.98);
+  padding: 50px 45px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.pate-form-box__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pate-form-box__icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.pate-form-box__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.pate-form-box__subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.pate-form-box__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f9fa;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+.pate-form-box__info-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* Benefits Grid - 3 Columns */
+.pate-benefits-grid {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.pate-benefits-grid__title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.pate-benefits-grid__subtitle {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+.benefit-card {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: #98FB98;
+}
+
+.benefit-card__icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.benefit-card__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.benefit-card__text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.pate-cta-box {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: linear-gradient(135deg, #dbc64c 0%, #e0ce64 100%);
+  padding: 35px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(219, 198, 76, 0.4);
+}
+
+.pate-cta-box__icon {
+  font-size: 50px;
+  flex-shrink: 0;
+}
+
+.pate-cta-box__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #270b60;
+  margin-bottom: 5px;
+}
+
+.pate-cta-box__text {
+  font-size: 16px;
+  color: #270b60;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Two Column Layout */
+.pate-main-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+/* Benefits List - Left Column */
+.pate-benefits-list {
+  padding-right: 30px;
+}
+
+.pate-benefits-list__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 35px;
+}
+
+.pate-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  padding-left: 0;
+}
+
+.pate-benefit-item:hover {
+  border-left-color: #98FB98;
+  padding-left: 15px;
+  transform: translateX(0);
+}
+
+.pate-benefit-item__icon {
+  font-size: 36px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.pate-benefit-item__content {
+  flex: 1;
+}
+
+.pate-benefit-item__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.pate-benefit-item__text {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.pate-highlight-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, #dbc64c 0%, #e0ce64 100%);
+  padding: 25px 30px;
+  border-radius: 15px;
+  margin-top: 40px;
+  box-shadow: 0 5px 20px rgba(219, 198, 76, 0.3);
+}
+
+.pate-highlight-box__icon {
+  font-size: 40px;
+}
+
+.pate-highlight-box__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #270b60;
+  margin-bottom: 5px;
+}
+
+.pate-highlight-box__text {
+  font-size: 15px;
+  color: #270b60;
+  font-weight: 500;
+}
+
+/* Form Sticky - Right Column */
+.pate-form-sticky {
+  position: sticky;
+  top: 20px;
+}
+
+.pate-form-wrapper-compact {
+  background: linear-gradient(135deg, #270b60 0%, #3a1570 100%);
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(39, 11, 96, 0.3);
+}
+
+.pate-form-header-compact {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pate-form-header__title-compact {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.pate-form-header__text-compact {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.pate-form__input,
+.pate-form__textarea {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.pate-form__label {
+  color: #ffffff;
+}
+
+.pate-form__info-compact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.pate-form__info-compact .pate-form__info-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+}
+
+.btn-pate-submit-full {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #98FB98 0%, #90EE90 100%);
+  color: #270b60;
+  font-size: 17px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(152, 251, 152, 0.3);
+}
+
+.btn-pate-submit-full:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(152, 251, 152, 0.4);
+}
+
+.btn-pate-submit-full .btn-pate-submit__icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.btn-pate-submit-full:hover .btn-pate-submit__icon {
+  transform: translateX(5px);
 }
 
 /* Form Section */
@@ -2762,13 +3127,87 @@ textarea#comment::placeholder {
 }
 
 /* Responsive */
+@media (max-width: 991px) {
+  .pate-benefits-list {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .pate-form-sticky {
+    position: relative;
+    top: 0;
+  }
+
+  .pate-cta-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+}
+
 @media (max-width: 768px) {
-  .pate-hero {
+  .pate-hero-full {
     padding: 60px 0 40px;
   }
 
+  .pate-hero-compact {
+    padding: 40px 0 30px;
+  }
+
   .pate-hero__title {
+    font-size: 32px;
+  }
+
+  .pate-hero__subtitle {
+    font-size: 16px;
+  }
+
+  .pate-hero__stats-row {
+    gap: 40px;
+  }
+
+  .pate-stat-inline__number {
     font-size: 36px;
+  }
+
+  .pate-benefits-list__title {
+    font-size: 28px;
+  }
+
+  .pate-benefit-item {
+    padding: 15px;
+  }
+
+  .pate-benefit-item__icon {
+    font-size: 32px;
+  }
+
+  .pate-form-wrapper-compact {
+    padding: 30px 25px;
+  }
+
+  .pate-form-header__title-compact {
+    font-size: 24px;
+  }
+
+  .pate-form-box {
+    padding: 35px 25px;
+  }
+
+  .pate-form-box__title {
+    font-size: 28px;
+  }
+
+  .pate-benefits-grid__title {
+    font-size: 32px;
+  }
+
+  .pate-cta-box__title {
+    font-size: 24px;
+  }
+
+  .pate-hero {
+    padding: 60px 0 40px;
   }
 
   .pate-hero__text {
@@ -2804,6 +3243,222 @@ textarea#comment::placeholder {
   .btn-pate-submit {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* ===== Contact Page Styles ===== */
+
+/* Contact Hero */
+.contact-hero {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 80px 0 60px;
+  text-align: center;
+}
+
+.contact-hero__badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #98FB98 0%, #90EE90 100%);
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #270b60;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(152, 251, 152, 0.3);
+}
+
+.contact-hero__title {
+  font-size: 52px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.contact-hero__subtitle {
+  font-size: 18px;
+  color: #666;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.contact-form-box {
+  background: #ffffff;
+  padding: 50px 45px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.contact-form__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  border-color: #98FB98;
+  box-shadow: 0 0 0 3px rgba(152, 251, 152, 0.2);
+  outline: none;
+}
+
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form__checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.contact-form__checkbox-input {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.contact-form__checkbox-label {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-form__link {
+  color: #270b60;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.contact-form__link:hover {
+  color: #98FB98;
+}
+
+.btn-contact-submit {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #98FB98 0%, #90EE90 100%);
+  color: #270b60;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(152, 251, 152, 0.4);
+}
+
+.btn-contact-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(152, 251, 152, 0.5);
+}
+
+.btn-contact-submit__icon {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.btn-contact-submit:hover .btn-contact-submit__icon {
+  transform: translateX(5px);
+}
+
+/* Contact Benefits */
+.contact-benefits {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.contact-benefits__title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.contact-benefit-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.contact-benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: #98FB98;
+}
+
+.contact-benefit-card__icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.contact-benefit-card__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.contact-benefit-card__text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 60px 0 40px;
+  }
+
+  .contact-hero__title {
+    font-size: 36px;
+  }
+
+  .contact-form-box {
+    padding: 35px 25px;
+  }
+
+  .contact-benefits__title {
+    font-size: 32px;
   }
 }
 
@@ -2988,6 +3643,158 @@ textarea#comment::placeholder {
   font-size: 14px;
   color: #999;
   font-weight: 500;
+}
+
+/* Loader Styles */
+.loader_bg {
+  position: fixed;
+  z-index: 9999999;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #270b60;
+  border-right: 4px solid #dbc64c;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Donation Section */
+.donation-section {
+  background: linear-gradient(135deg, #270b60 0%, #3d1485 100%);
+  padding: 120px 0 100px 0;
+}
+
+.donation-hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.donation-hero__badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #dbc64c 0%, #f4d96f 100%);
+  color: var(--text-dark);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(219, 198, 76, 0.3);
+}
+
+.donation-hero__title {
+  font-size: 48px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.donation-hero__text {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+}
+
+.donation-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.donation-tabs {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.donation-tab {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 20px 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.donation-tab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #270b60;
+}
+
+.donation-tab--active {
+  background: linear-gradient(135deg, #270b60 0%, #3d1485 100%);
+  border-color: #270b60;
+  color: white;
+  box-shadow: 0 8px 20px rgba(39, 11, 96, 0.3);
+}
+
+.donation-tab__icon {
+  font-size: 24px;
+}
+
+.donation-tab__text {
+  font-size: 16px;
+}
+
+.donation-widget {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  min-height: 300px;
+}
+
+#twingleEmbedContainer {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .donation-hero__title {
+    font-size: 36px;
+  }
+
+  .donation-tabs {
+    flex-direction: column;
+  }
+
+  .donation-tab {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .donation-widget {
+    padding: 25px;
+  }
 }
 
 .section--contact {
