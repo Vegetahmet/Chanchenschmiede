@@ -250,37 +250,89 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <!-- Features Icons Section End -->
 
       <!-- Target Group Section Start -->
-      <section class="section section--bg-light">
+      <section class="section section--target-modern">
           <div class="container">
-              <div class="section-content">
-                  <div class="row">
-                      <div class="col-md-6">
-                          <h1 class="section-header__title">Unsere Zielgruppe</h1>
-                          <h1 class="section-header__subtitle">Bildung für Alle.</h1>
-                          <p class="services_text p-2">
-                              Die Chancenschmiede setzt sich engagiert dafür ein, benachteiligten Kindern und Jugendlichen Chancen zu bieten. Unsere gemeinnützige Organisation bietet gezielte Nachhilfe und Förderung in Einzel- oder Gruppensitzungen für junge Menschen, die unter schwierigen Bedingungen aufwachsen und wenig Zugang zu Bildungsangeboten haben.
+              <!-- Hero Header -->
+              <div class="target-hero" data-aos="fade-up">
+                  <div class="target-hero__badge">🎯 Für wen wir da sind</div>
+                  <h2 class="target-hero__title">
+                      <span class="gradient-text">Bildung für Alle</span> – unabhängig vom Hintergrund
+                  </h2>
+                  <p class="target-hero__subtitle">
+                      Wir unterstützen benachteiligte Kinder und Jugendliche, die aufgrund ihrer sozialen oder persönlichen Umstände kaum Zugang zu Bildungsangeboten haben.
+                  </p>
+              </div>
+
+              <!-- Main Content with Images -->
+              <div class="row align-items-center mt-5 mb-5">
+                  <div class="col-lg-6" data-aos="fade-right">
+                      <div class="target-content">
+                          <h3 class="target-content__title">Gezielte Nachhilfe & Förderung</h3>
+                          <p class="target-content__text">
+                              Die Chancenschmiede setzt sich engagiert dafür ein, benachteiligten Kindern und Jugendlichen Chancen zu bieten. Unsere gemeinnützige Organisation bietet gezielte Nachhilfe und Förderung in Einzel- oder Gruppensitzungen für junge Menschen, die unter schwierigen Bedingungen aufwachsen.
                           </p>
-                          <p class="services_text p-2">
-                              Besonders fördern wir jene, die aufgrund ihrer sozialen oder persönlichen Umstände kaum Unterstützung erhalten.
-                          </p>
+                          <div class="target-highlight">
+                              <div class="target-highlight__icon">💡</div>
+                              <div class="target-highlight__text">
+                                  <strong>Besonders fördern wir jene,</strong> die aufgrund ihrer sozialen oder persönlichen Umstände kaum Unterstützung erhalten.
+                              </div>
+                          </div>
                       </div>
-                      <div class="col-md-6">
-                          <div class="image_1"><img src="images/img-1.png"></div>
+                  </div>
+                  <div class="col-lg-6" data-aos="fade-left">
+                      <div class="target-image-wrapper">
+                          <img src="images/img-1.png" alt="Nachhilfe" class="target-image">
+                          <div class="target-image-badge">📚 Einzelförderung</div>
                       </div>
-                      <div class="col-md-6 mt-3">
-                          <div class="image_1"><img src="images/img-2.png"></div>
+                  </div>
+              </div>
+
+              <!-- Features Row -->
+              <div class="row mb-5">
+                  <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                      <div class="target-feature">
+                          <div class="target-feature__icon">🎓</div>
+                          <h4>Langfristige Begleitung</h4>
+                          <p>Durch individuell angepasste Lernpläne unterstützen wir die persönliche und schulische Entwicklung.</p>
                       </div>
-                      <div class="col-md-6 mt-3 p-2">
-                          <p class="services_text">
+                  </div>
+                  <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                      <div class="target-feature">
+                          <div class="target-feature__icon">💪</div>
+                          <h4>Selbstvertrauen stärken</h4>
+                          <p>Bildung ist die Grundlage für Selbstvertrauen und persönliche Entwicklung jedes Kindes.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                      <div class="target-feature">
+                          <div class="target-feature__icon">🌟</div>
+                          <h4>Stabile Perspektiven</h4>
+                          <p>Mit erfahrenen Lehrkräften schaffen wir ein Umfeld, das Zukunftsperspektiven eröffnet.</p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Bottom Content with Image -->
+              <div class="row align-items-center">
+                  <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                      <div class="target-content">
+                          <h3 class="target-content__title">Mehr als Wissensvermittlung</h3>
+                          <p class="target-content__text">
                               Wir verstehen Bildung als Grundlage für Selbstvertrauen und persönliche Entwicklung. Unsere Angebote gehen daher über die reine Wissensvermittlung hinaus: Durch langfristige Begleitung und individuell angepasste Lernpläne unterstützen wir die persönliche und schulische Entwicklung unserer Teilnehmer.
                           </p>
-                          <br>
-                          <p class="services_text">
+                          <p class="target-content__text">
                               Gemeinsam mit erfahrenen Lehrkräften und engagierten Unterstützern schaffen wir ein stabiles Umfeld, das jungen Menschen Perspektiven für ihre Zukunft eröffnet. Unser Ziel ist es, Bildungslücken zu schließen und Jugendlichen Selbstvertrauen zu geben – unabhängig von ihrem sozialen Hintergrund oder persönlichen Herausforderungen.
                           </p>
                       </div>
                   </div>
+                  <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+                      <div class="target-image-wrapper">
+                          <img src="images/img-2.png" alt="Gruppenförderung" class="target-image">
+                          <div class="target-image-badge">👥 Gruppenförderung</div>
+                      </div>
+                  </div>
               </div>
+
           </div>
       </section>
       <!-- Target Group Section End -->
