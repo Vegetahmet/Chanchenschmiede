@@ -1,6 +1,15 @@
 <?php
 // E-Mail-Verarbeitung
 $message = '';
+
+// Erfolgsmeldung anzeigen wenn von redirect
+if (isset($_GET['success']) && $_GET['success'] == '1') {
+    $message = '<div class="alert alert-success">Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns in Kürze bei Ihnen.</div>';
+}
+if (isset($_GET['error']) && $_GET['error'] == '1') {
+    $message = '<div class="alert alert-danger">Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.</div>';
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
@@ -21,9 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers .= "Reply-To: $email\r\n";
 
     if (mail($to, $subject, $email_content, $headers)) {
-        $message = '<div class="alert alert-success">Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns in Kürze bei Ihnen.</div>';
+        header("Location: bildungspate.php#patenschaft-form?success=1");
+        exit();
     } else {
-        $message = '<div class="alert alert-danger">Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.</div>';
+        header("Location: bildungspate.php#patenschaft-form?error=1");
+        exit();
     }
 }
 

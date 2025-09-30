@@ -2,6 +2,14 @@
 $successMessage = '';
 $errorMessage = '';
 
+// Erfolgsmeldung anzeigen wenn von redirect
+if (isset($_GET['success']) && $_GET['success'] == '1') {
+    $successMessage = "Termin erfolgreich vereinbart! Wir werden uns schnellstmöglich bei dir melden.";
+}
+if (isset($_GET['error']) && $_GET['error'] == '1') {
+    $errorMessage = "Fehler beim Versenden der Nachricht. Bitte versuchen Sie es später erneut.";
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firstName = htmlspecialchars($_POST['firstName']);
     $lastName = htmlspecialchars($_POST['lastName']);
@@ -32,9 +40,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers = "From: $email";
 
     if (mail($to, $subject, $message, $headers)) {
-        $successMessage = "Termin erfolgreich vereinbart! Wir werden uns schnellstmöglich bei dir melden.";
+        header("Location: contact.php#appointment-form?success=1");
+        exit();
     } else {
-        $errorMessage = "Fehler beim Versenden der Nachricht. Bitte versuchen Sie es später erneut.";
+        header("Location: contact.php#appointment-form?error=1");
+        exit();
     }
 }
 

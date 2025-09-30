@@ -2,6 +2,11 @@
 // Variablen für die Fehlermeldung und Erfolgsmeldung
 $message = "";
 
+// Erfolgsmeldung anzeigen wenn von redirect
+if (isset($_GET['success']) && $_GET['success'] == '1') {
+    $message = "<div class='message-success'>Vielen Dank! Ihre Nachricht wurde erfolgreich versendet.</div>";
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Formularfelder abrufen und validieren
     $name = htmlspecialchars(trim($_POST['Name']));
@@ -27,7 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // E-Mail versenden
         if (mail($to, $subject, $messageBody, $headers)) {
-            $message = "<div class='message-success'>Vielen Dank! Ihre Nachricht wurde erfolgreich versendet.</div>";
+            // Nach erfolgreichem Senden zum Kontaktbereich weiterleiten
+            header("Location: index.php#contact?success=1");
+            exit();
         } else {
             $message = "<div class='message-error'>Fehler: Ihre Nachricht konnte nicht versendet werden.</div>";
         }
