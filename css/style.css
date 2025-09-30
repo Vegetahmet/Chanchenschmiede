@@ -25,6 +25,44 @@
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
+:root {
+  /* Farbpalette */
+  --color-primary: #270b60;
+  --color-secondary: #dbc64c;
+  --color-accent: #98FB98;
+
+  /* Hintergründe */
+  --bg-light: #f8f9fa;
+  --bg-light-blue: #f0f8ff;
+  --bg-white: #ffffff;
+  --bg-dark: #161616;
+
+  /* Text-Farben */
+  --text-dark: #333333;
+  --text-medium: #666666;
+  --text-light: #929191;
+  --text-white: #ffffff;
+
+  /* Abstände */
+  --spacing-xs: 10px;
+  --spacing-sm: 15px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+  --spacing-xl: 40px;
+
+  /* Border-Radius */
+  --radius-sm: 10px;
+  --radius-md: 15px;
+  --radius-lg: 20px;
+  --radius-xl: 25px;
+  --radius-round: 50px;
+
+  /* Schatten */
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
 * {
   box-sizing: border-box !important;
   transition: ease all 0.5s;
@@ -36,7 +74,7 @@ html {
 }
 
 body {
-  color: #666666;
+  color: var(--text-medium);
   font-size: 14px;
   font-family: Poppins;
   line-height: 1.80857;
@@ -1398,4 +1436,428 @@ textarea#comment::placeholder {
   .partner-track {
     gap: 32px;
   }
+}
+
+/*--------------------------------------------------------------------- Phase 1: Wiederverwendbare Component-Klassen ---------------------------------------------------------------------*/
+
+/* Mission Box */
+.mission-box {
+  background: var(--bg-white);
+  padding: var(--spacing-xl);
+  border: 3px solid #000;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  margin: var(--spacing-xl) 0;
+}
+
+.mission-box__title {
+  color: var(--text-dark);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+.mission-box__text {
+  color: var(--text-dark);
+  font-size: 18px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.mission-box__text--italic {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* Feature Card */
+.feature-card {
+  text-align: center;
+  background: var(--bg-light-blue);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  height: 100%;
+}
+
+.feature-card__icon {
+  background: var(--bg-white);
+  padding: var(--spacing-md);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+}
+
+.feature-card__icon-emoji {
+  font-size: 2rem;
+}
+
+.feature-card__title {
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.feature-card__text {
+  color: var(--text-medium);
+  font-size: 14px;
+}
+
+/* Support Box */
+.support-box {
+  background: var(--bg-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.support-box__text {
+  color: var(--text-dark);
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Button Styles */
+.btn-nav-special {
+  border: solid 2px var(--color-secondary);
+  border-radius: var(--radius-round);
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-nav-special:hover {
+  background-color: var(--color-secondary);
+  color: var(--bg-white) !important;
+}
+
+.btn-support {
+  background: var(--color-accent);
+  color: var(--text-dark);
+  padding: 15px 40px;
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin: var(--spacing-xs);
+  transition: all 0.3s ease;
+}
+
+.btn-support:hover {
+  background: #90EE90;
+  color: var(--text-dark);
+}
+
+/* Section Backgrounds */
+.section-bg-light {
+  background: var(--bg-light);
+}
+
+.section-bg-white {
+  background: var(--bg-white);
+}
+
+.section-bg-primary {
+  background-color: var(--color-primary);
+}
+
+/* Text Utilities */
+.text-center {
+  text-align: center;
+}
+
+.mb-5 {
+  margin-bottom: 50px;
+}
+
+/* Message Styles */
+.message-success {
+  color: green;
+}
+
+.message-error {
+  color: red;
+}
+
+/*--------------------------------------------------------------------- Phase 4: Vereinheitlichte Komponenten ---------------------------------------------------------------------*/
+
+/* === Button System === */
+
+/* Primary Button (Haupt-CTA) */
+.btn-primary-custom {
+  display: inline-block;
+  padding: 12px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-white);
+  background-color: var(--color-secondary);
+  border: 3px solid var(--color-secondary);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--bg-white);
+  color: var(--color-secondary);
+}
+
+/* Secondary Button (Alternative CTA) */
+.btn-secondary-custom {
+  display: inline-block;
+  padding: 12px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-secondary);
+  background-color: transparent;
+  border: 3px solid var(--color-secondary);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-secondary-custom:hover {
+  background-color: var(--color-secondary);
+  color: var(--bg-white);
+}
+
+/* Success Button (Grün - für Förderanfrage) */
+.btn-success-custom {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-xl);
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-success-custom:hover {
+  background-color: #90EE90;
+  color: var(--text-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Small Button (Navigation, etc.) */
+.btn-small {
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+/* Navigation Button Override - verhindert gelben Hover */
+.navbar-light .navbar-nav .nav-link.btn-success-custom:hover,
+.navbar-light .navbar-nav .nav-link.btn-success-custom:focus {
+  background-color: #90EE90 !important;
+  color: var(--text-dark) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* === Card System === */
+
+/* Base Card */
+.card {
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+/* Card mit Icon */
+.card--icon {
+  text-align: center;
+  background: var(--bg-light-blue);
+}
+
+.card__icon-wrapper {
+  background: var(--bg-white);
+  padding: var(--spacing-md);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+}
+
+.card__icon-emoji {
+  font-size: 2rem;
+}
+
+.card__icon-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Card Header */
+.card__title {
+  color: var(--text-dark);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.card__subtitle {
+  color: var(--text-medium);
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* Card mit Highlight-Border */
+.card--highlight {
+  border: 3px solid #000;
+  box-shadow: none;
+}
+
+/* Card mit farbigem Border */
+.card--bordered {
+  border: 1px solid #e8e8e8;
+  position: relative;
+}
+
+.card--bordered::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+  box-shadow: inset 0 0 0 3px rgba(219, 198, 76, 0.35);
+  pointer-events: none;
+}
+
+/* Card Typen */
+.card--yellow {
+  background-color: var(--color-secondary);
+}
+
+.card--yellow:hover {
+  background-color: var(--bg-white);
+  box-shadow: 0px 3px 20px -3px #f4f4f4;
+}
+
+.card--story {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 24px 20px;
+  margin-bottom: 24px;
+}
+
+.card--story p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-dark);
+}
+
+/*--------------------------------------------------------------------- Phase 2: Konsistente Section-Struktur ---------------------------------------------------------------------*/
+
+/* Base Section */
+.section {
+  width: 100%;
+  float: left;
+  padding: 90px 0;
+}
+
+.section--no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.section--medium-padding {
+  padding: 60px 0;
+}
+
+/* Section Header */
+.section-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header__title {
+  font-size: 40px;
+  color: var(--color-secondary);
+  font-weight: bold;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.section-header__subtitle {
+  font-size: 40px;
+  color: var(--text-dark);
+  font-weight: bold;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.section-header__text {
+  font-size: 16px;
+  color: var(--text-dark);
+  margin: 0;
+  padding-top: 20px;
+}
+
+.section-header__title--white {
+  color: var(--text-white);
+}
+
+.section-header__text--white {
+  color: #ddd;
+}
+
+/* Section Content */
+.section-content {
+  width: 100%;
+  float: left;
+}
+
+/* Spezielle Section-Typen */
+.section--hero {
+  background-image: url(../images/banner-bg.webp);
+  background-size: 100%;
+  padding-bottom: 90px;
+}
+
+.section--features {
+  background: var(--bg-white);
+}
+
+.section--target-group {
+  background: var(--bg-white);
+}
+
+.section--support {
+  background: var(--bg-light);
+}
+
+.section--donation {
+  background: var(--color-primary);
+}
+
+.section--patenschaft {
+  background: #f7f7fb;
+}
+
+.section--contact {
+  background: var(--bg-dark);
+  padding: 150px 0 50px 0;
 }

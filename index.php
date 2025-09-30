@@ -27,12 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // E-Mail versenden
         if (mail($to, $subject, $messageBody, $headers)) {
-            $message = "<div style='color: green;'>Vielen Dank! Ihre Nachricht wurde erfolgreich versendet.</div>";
+            $message = "<div class='message-success'>Vielen Dank! Ihre Nachricht wurde erfolgreich versendet.</div>";
         } else {
-            $message = "<div style='color: red;'>Fehler: Ihre Nachricht konnte nicht versendet werden.</div>";
+            $message = "<div class='message-error'>Fehler: Ihre Nachricht konnte nicht versendet werden.</div>";
         }
     } else {
-        $message = "<div style='color: red;'>Bitte füllen Sie alle Felder aus.</div>";
+        $message = "<div class='message-error'>Bitte füllen Sie alle Felder aus.</div>";
     }
 }
 ?>
@@ -92,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <a class="nav-link" href="#contact">Kontakt</a>
                      </li>
                      <li class="nav-item ml-auto">
-                        <a class="nav-link"  style="border:solid;border-color:#dbc64c;border-radius:50px" href="contact.php">Probestunde</a>
+                        <a class="nav-link btn-success-custom btn-small" href="contact.php">Probestunde</a>
                      </li>
                   </ul>
                 
@@ -107,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                      <div class="carousel-item active">
                         <p class="banner_text">Chancenschmiede</p>
                         <h1 class="banner_taital">Wir geben Kindern faire Bildungschancen<br> – auch bei finanziellen Hürden.</h1>
-                        <div class="read_bt"><a href="contact.php">Termin vereinbaren.</a></div>
+                        <div class="read_bt"><a href="contact.php" class="btn-success-custom">Termin vereinbaren</a></div>
 
                      </div>
                
@@ -122,176 +122,191 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          <div class="play_icon"><a href="#"><img src="images/play-icon.png"></a></div>
       </div>
       <!--header section end -->
-          <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div style="background: white; padding: 40px; border: 3px solid #000; border-radius: 20px; text-align: center; margin: 40px 0;">
-                    <h2 style="color: #333; font-size: 28px; font-weight: 700; margin-bottom: 20px;">Unsere Mission</h2>
-                    <p style="color: #333; font-size: 18px; margin-bottom: 15px;">
-                        Wir schließen Lernlücken, stärken Selbstvertrauen und öffnen neue Chancen – unabhängig vom Einkommen der Eltern.
-                    </p>
-                    <p style="color: #333; font-size: 16px; font-style: italic;">
-                        Bildung ist nicht nur Wissen, sondern der Schlüssel zu einer selbstbestimmten Zukunft.
-                    </p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div style="text-align: center; background: #f0f8ff; padding: 30px; border-radius: 15px; height: 100%;">
-                    <div style="background: white; padding: 20px; border-radius: 50%; width: 80px; height: 80px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                        <span style="font-size: 2rem;">😊</span>
-                    </div>
-                    <h5 style="color: #333; font-weight: 600; margin-bottom: 10px;">Lernfreude</h5>
-                    <p style="color: #666; font-size: 14px;">Wir wecken die natürliche Neugier und Freude am Lernen</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div style="text-align: center; background: #f0f8ff; padding: 30px; border-radius: 15px; height: 100%;">
-                    <div style="background: white; padding: 20px; border-radius: 50%; width: 80px; height: 80px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                        <span style="font-size: 2rem;">🎯</span>
-                    </div>
-                    <h5 style="color: #333; font-weight: 600; margin-bottom: 10px;">Individuelle Förderung</h5>
-                    <p style="color: #666; font-size: 14px;">Jedes Kind erhält maßgeschneiderte Unterstützung</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div style="text-align: center; background: #f0f8ff; padding: 30px; border-radius: 15px; height: 100%;">
-                    <div style="background: white; padding: 20px; border-radius: 50%; width: 80px; height: 80px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                        <span style="font-size: 2rem;">🤝</span>
-                    </div>
-                    <h5 style="color: #333; font-weight: 600; margin-bottom: 10px;">Gemeinsam stark</h5>
-                    <p style="color: #666; font-size: 14px;">Zusammen erreichen wir mehr für unsere Kinder</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="services_section layout_padding" style="background: #f8f9fa;">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h1 class="language_taital">So unterstützen wir Sie</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-8 mx-auto">
-                    <div class="text-center" style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                        <p style="color: #333; font-size: 18px; line-height: 1.6; margin-bottom: 30px;">
-                            Wenn kein Anspruch auf staatliche Förderung besteht, finden wir gemeinsam einen Weg, damit Ihr Kind die passende Lernförderung erhält. Wir helfen, einen Platz im Nachhilfe- oder Hausaufgabenprogramm der <strong>Studyfriends GmbH</strong> zu sichern – gefördert durch unsere Bildungspaten.
+      <!-- Mission Section Start -->
+      <section class="section section--features">
+          <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="card card--highlight text-center">
+                        <h2 class="card__title" style="font-size: 28px; margin-bottom: 20px;">Unsere Mission</h2>
+                        <p class="card__subtitle" style="font-size: 18px; margin-bottom: 15px;">
+                            Wir schließen Lernlücken, stärken Selbstvertrauen und öffnen neue Chancen – unabhängig vom Einkommen der Eltern.
                         </p>
-                        <div class="row justify-content-center">
-                          
-                            <div class="col-md-6">
-                                <a href="#foerderanfrage" style="background: #98FB98; color: #333; padding: 15px 40px; border-radius: 25px; text-decoration: none; font-weight: 600; display: inline-block; margin: 10px; transition: all 0.3s ease;" onmouseover="this.style.background='#90EE90'" onmouseout="this.style.background='#98FB98'">
-                                    Förderanfrage stellen
-                                </a>
-                            </div>
-                        </div>
+                        <p class="card__subtitle" style="font-size: 16px; font-style: italic;">
+                            Bildung ist nicht nur Wissen, sondern der Schlüssel zu einer selbstbestimmten Zukunft.
+                        </p>
                     </div>
                 </div>
             </div>
+
+            <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card card--icon">
+                    <div class="card__icon-wrapper">
+                        <span class="card__icon-emoji">😊</span>
+                    </div>
+                    <h5 class="card__title">Lernfreude</h5>
+                    <p class="card__subtitle">Wir wecken die natürliche Neugier und Freude am Lernen</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card card--icon">
+                    <div class="card__icon-wrapper">
+                        <span class="card__icon-emoji">🎯</span>
+                    </div>
+                    <h5 class="card__title">Individuelle Förderung</h5>
+                    <p class="card__subtitle">Jedes Kind erhält maßgeschneiderte Unterstützung</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card card--icon">
+                    <div class="card__icon-wrapper">
+                        <span class="card__icon-emoji">🤝</span>
+                    </div>
+                    <h5 class="card__title">Gemeinsam stark</h5>
+                    <p class="card__subtitle">Zusammen erreichen wir mehr für unsere Kinder</p>
+                </div>
+            </div>
         </div>
-    </div>
-<!-- twingle -->
-      <!-- Sprachabschnitt -->
-   <div class="container">
+          </div>
+      </section>
+      <!-- Mission Section End -->
 
+      <!-- Support Section Start -->
+      <section class="section section--support">
+          <div class="container">
+              <div class="section-header">
+                  <h1 class="section-header__title">So unterstützen wir Sie</h1>
+              </div>
+              <div class="section-content">
+                  <div class="row align-items-center">
+                      <div class="col-lg-8 mx-auto">
+                          <div class="text-center support-box">
+                              <p class="support-box__text">
+                                  Wenn kein Anspruch auf staatliche Förderung besteht, finden wir gemeinsam einen Weg, damit Ihr Kind die passende Lernförderung erhält. Wir helfen, einen Platz im Nachhilfe- oder Hausaufgabenprogramm der <strong>Studyfriends GmbH</strong> zu sichern – gefördert durch unsere Bildungspaten.
+                              </p>
+                              <div class="row justify-content-center">
+                                  <div class="col-md-6">
+                                      <a href="#foerderanfrage" class="btn-success-custom">
+                                          Förderanfrage stellen
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- Support Section End -->
 
-      <h1 class="language_taital">Bildung und Unterstützung</h1>
-      <h1 class="language_taital_1">für Kinder und Jugendliche, die eine Perspektive brauchen</h1>
-      <div class="language_section_2 layout_padding">
-         <div class="row">
-            <div class="col-lg-3 col-sm-6">
-               <div class="box_main">
-                  <div class="icon_1"><img src="images/icon-1.png"></div>
-                  <h6 class="heavy_text">Flexibler<br>Unterricht </h6>
-               </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-               <div class="box_main ">
-                  <div class="icon_1"><img src="images/icon-2.png"></div>
-                  <h6 class="heavy_text">Individuelle<br>Lernpläne</h6>
-               </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-               <div class="box_main">
-                  <div class="icon_1"><img src="images/icon-3.png"></div>
-                  <h6 class="heavy_text">Zugriff auf<br>Online-Lernplattform</h6>
-               </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-               <div class="box_main">
-                  <div class="icon_1"><img src="images/icon-4.png"></div>
-                  <h6 class="heavy_text">Erfahrene<br>Nachhilfelehrer</h6>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-   
-      <!--language  section end -->
-      <!--services section start -->
-      <div class="services_section layout_padding">
-         
-   <div class="container">
-      <div class="row">
-         <div class="col-md-6">
-            <h1 class="language_taital">Unsere Zielgruppe</h1>
-            <h1 class="language_taital_1">Bildung für Alle.</h1>
-            <p class="services_text  p-2">
-               Die Chancenschmiede setzt sich engagiert dafür ein, benachteiligten Kindern und Jugendlichen Chancen zu bieten. Unsere gemeinnützige Organisation bietet gezielte Nachhilfe und Förderung in Einzel- oder Gruppensitzungen für junge Menschen, die unter schwierigen Bedingungen aufwachsen und wenig Zugang zu Bildungsangeboten haben.
-            </p>
-            <p class="services_text  p-2">
-               Besonders fördern wir jene, die aufgrund ihrer sozialen oder persönlichen Umstände kaum Unterstützung erhalten.
-            </p>
-         </div>
-         <div class="col-md-6">
-            <div class="image_1"><img src="images/img-1.png"></div>
-         </div>
-         <div class="col-md-6 mt-3">
-            <div class="image_1"><img src="images/img-2.png"></div>
-         </div>
-         <div class="col-md-6 mt-3 p-2">
-            <p class="services_text">
-              Wir verstehen Bildung als Grundlage für Selbstvertrauen und persönliche Entwicklung. Unsere Angebote gehen daher über die reine Wissensvermittlung hinaus: Durch langfristige Begleitung und individuell angepasste Lernpläne unterstützen wir die persönliche und schulische Entwicklung unserer Teilnehmer.
-            </p>
-            <br>
-            <p class="services_text">
-               Gemeinsam mit erfahrenen Lehrkräften und engagierten Unterstützern schaffen wir ein stabiles Umfeld, das jungen Menschen Perspektiven für ihre Zukunft eröffnet. Unser Ziel ist es, Bildungslücken zu schließen und Jugendlichen Selbstvertrauen zu geben – unabhängig von ihrem sozialen Hintergrund oder persönlichen Herausforderungen.
-            </p>
-         </div>
-      </div>
-   </div>
-</div>
+      <!-- Features Icons Section Start -->
+      <section class="section section--features">
+          <div class="container">
+              <div class="section-header">
+                  <h1 class="section-header__title">Bildung und Unterstützung</h1>
+                  <h1 class="section-header__subtitle">für Kinder und Jugendliche, die eine Perspektive brauchen</h1>
+              </div>
+              <div class="section-content">
+                  <div class="row">
+                      <div class="col-lg-3 col-sm-6 mb-4">
+                          <div class="card card--yellow">
+                              <div class="card__icon-wrapper">
+                                  <img src="images/icon-1.png" class="card__icon-img">
+                              </div>
+                              <h6 class="card__title">Flexibler<br>Unterricht</h6>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-6 mb-4">
+                          <div class="card card--yellow">
+                              <div class="card__icon-wrapper">
+                                  <img src="images/icon-2.png" class="card__icon-img">
+                              </div>
+                              <h6 class="card__title">Individuelle<br>Lernpläne</h6>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-6 mb-4">
+                          <div class="card card--yellow">
+                              <div class="card__icon-wrapper">
+                                  <img src="images/icon-3.png" class="card__icon-img">
+                              </div>
+                              <h6 class="card__title">Zugriff auf<br>Online-Lernplattform</h6>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-6 mb-4">
+                          <div class="card card--yellow">
+                              <div class="card__icon-wrapper">
+                                  <img src="images/icon-4.png" class="card__icon-img">
+                              </div>
+                              <h6 class="card__title">Erfahrene<br>Nachhilfelehrer</h6>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- Features Icons Section End -->
 
-      <!--Servicebereich Ende -->
-      <!--Galeriebereich Anfang -->
- 
-      <!--Galeriebereich Ende -->
-      <!--Über uns Abschnitt Anfang -->
-      <!-- Spenden Section mit Buttons -->
-<section class="about_section layout_padding" style="background-color:#270b60;" id="aboutus">
-  <div class="container">
-    <div class="text-center mb-4">
-      <h2 style="color:#fff; font-weight:700;">Unterstützen Sie uns</h2>
-      <p style="color:#ddd;">Wählen Sie aus, wie Sie uns unterstützen möchten:</p>
-    </div>
+      <!-- Target Group Section Start -->
+      <section class="section section--target-group">
+          <div class="container">
+              <div class="section-content">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <h1 class="section-header__title">Unsere Zielgruppe</h1>
+                          <h1 class="section-header__subtitle">Bildung für Alle.</h1>
+                          <p class="services_text p-2">
+                              Die Chancenschmiede setzt sich engagiert dafür ein, benachteiligten Kindern und Jugendlichen Chancen zu bieten. Unsere gemeinnützige Organisation bietet gezielte Nachhilfe und Förderung in Einzel- oder Gruppensitzungen für junge Menschen, die unter schwierigen Bedingungen aufwachsen und wenig Zugang zu Bildungsangeboten haben.
+                          </p>
+                          <p class="services_text p-2">
+                              Besonders fördern wir jene, die aufgrund ihrer sozialen oder persönlichen Umstände kaum Unterstützung erhalten.
+                          </p>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="image_1"><img src="images/img-1.png"></div>
+                      </div>
+                      <div class="col-md-6 mt-3">
+                          <div class="image_1"><img src="images/img-2.png"></div>
+                      </div>
+                      <div class="col-md-6 mt-3 p-2">
+                          <p class="services_text">
+                              Wir verstehen Bildung als Grundlage für Selbstvertrauen und persönliche Entwicklung. Unsere Angebote gehen daher über die reine Wissensvermittlung hinaus: Durch langfristige Begleitung und individuell angepasste Lernpläne unterstützen wir die persönliche und schulische Entwicklung unserer Teilnehmer.
+                          </p>
+                          <br>
+                          <p class="services_text">
+                              Gemeinsam mit erfahrenen Lehrkräften und engagierten Unterstützern schaffen wir ein stabiles Umfeld, das jungen Menschen Perspektiven für ihre Zukunft eröffnet. Unser Ziel ist es, Bildungslücken zu schließen und Jugendlichen Selbstvertrauen zu geben – unabhängig von ihrem sozialen Hintergrund oder persönlichen Herausforderungen.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- Target Group Section End -->
+      <!-- Donation Section Start -->
+      <section class="section section--donation section--medium-padding" id="aboutus">
+          <div class="container">
+              <div class="section-header">
+                  <h2 class="section-header__title--white">Unterstützen Sie uns</h2>
+                  <p class="section-header__text--white">Wählen Sie aus, wie Sie uns unterstützen möchten:</p>
+              </div>
+              <div class="section-content">
+                  <!-- Buttons -->
+                  <div class="d-flex justify-content-center mb-4">
+                      <button id="btnPrivat" class="btn btn-outline-light px-4 me-2">
+                          Privatperson
+                      </button>
+                      <button id="btnGewerbe" class="btn btn-light px-4 fw-bold active">
+                          Gewerbe
+                      </button>
+                  </div>
 
-    <!-- Buttons -->
-    <div class="d-flex justify-content-center mb-4">
-      <button id="btnPrivat" class="btn btn-outline-light px-4 me-2">
-        Privatperson
-      </button>
-      <button id="btnGewerbe" class="btn btn-light px-4 fw-bold active">
-        Gewerbe
-      </button>
-    </div>
-
-    <!-- Twingle-Widget -->
-    <div id="twingleEmbedContainer" class="text-center" style="min-height:300px;"></div>
-  </div>
-</section>
+                  <!-- Twingle-Widget -->
+                  <div id="twingleEmbedContainer" class="text-center" style="min-height:300px;"></div>
+              </div>
+          </div>
+      </section>
+      <!-- Donation Section End -->
 
 <script>
 (function () {
@@ -419,110 +434,87 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          </div>
       </div>-->
       <!--Veranstaltungsbereich Ende -->
-      <!--Schülerbereich Anfang -->
-      <div class="students_section layout_padding">
-<!-- Bildungspate & Erfolgsgeschichten - Kombinierte Section -->
-<section id="bildungspate" class="patenschaft_section layout_padding">
-  <div class="container">
+      <!-- Patenschaft Section Start -->
+      <section id="bildungspate" class="section section--patenschaft section--medium-padding">
+          <div class="container">
+              <!-- Hauptüberschrift -->
+              <div class="section-header">
+                  <h2 class="patenschaft_title">
+                      So werden Sie Bildungspate – <span>und so wirkt Ihre Unterstützung</span>
+                  </h2>
+              </div>
 
-    <!-- Hauptüberschrift -->
-    <div class="section_heading text-center">
-      <h2 class="patenschaft_title">
-        So werden Sie Bildungspate – <span>und so wirkt Ihre Unterstützung</span>
-      </h2>
-    </div>
+              <div class="section-content">
+                  <div class="row">
+                      <!-- Textblock links -->
+                      <div class="col-md-8">
+                          <div class="card card--bordered">
+                              <ul class="patenschaft_list">
+                                  <li><strong>Sie schenken einem Kind in unserer Region</strong> wertvolle Lernchancen.</li>
+                                  <li><strong>Mit 60 € pro Monat</strong> finanzieren Sie einen Platz im Nachhilfe- oder Hausaufgabenprogramm.</li>
+                                  <li><strong>Sie bestimmen, in welchem Rhythmus Sie fördern</strong> – monatlich, quartalsweise oder jährlich – <strong>wie vielen Kindern</strong> Sie Lernchancen ermöglichen.</li>
+                                  <li>Wir zeigen Ihnen transparent, wie Ihre Unterstützung eingesetzt wird und welche Wirkung sie entfaltet.</li>
+                                  <li>Auf Wunsch nennen wir Sie öffentlich als Bildungspaten auf unserer Website und in der Presse.</li>
+                              </ul>
+                              <p class="patenschaft_note">
+                                  Ihr Beitrag kommt direkt dort an, wo er gebraucht wird – ohne Umwege, für eine bessere Zukunft.
+                              </p>
+                          </div>
+                      </div>
 
-    <div class="row">
-      <!-- Textblock links -->
-      <div class="col-md-8">
-        <div class="patenschaft_panel">
-          <ul class="patenschaft_list">
-            <li><strong>Sie schenken einem Kind in unserer Region</strong> wertvolle Lernchancen.</li>
-            <li><strong>Mit 60 € pro Monat</strong> finanzieren Sie einen Platz im Nachhilfe- oder Hausaufgabenprogramm.</li>
-            <li><strong>Sie bestimmen, in welchem Rhythmus Sie fördern</strong> – monatlich, quartalsweise oder jährlich – <strong>wie vielen Kindern</strong> Sie Lernchancen ermöglichen.</li>
-            <li>Wir zeigen Ihnen transparent, wie Ihre Unterstützung eingesetzt wird und welche Wirkung sie entfaltet.</li>
-            <li>Auf Wunsch nennen wir Sie öffentlich als Bildungspaten auf unserer Website und in der Presse.</li>
-          </ul>
-          <p class="patenschaft_note">
-            Ihr Beitrag kommt direkt dort an, wo er gebraucht wird – ohne Umwege, für eine bessere Zukunft.
-          </p>
-        </div>
-      </div>
+                      <!-- CTA rechts -->
+                      <div class="col-md-4">
+                          <aside class="patenschaft_cta">
+                              <a class="btn-success-custom" href="/#kontakt">
+                                  Jetzt Bildungspate werden
+                              </a>
+                          </aside>
+                      </div>
+                  </div>
 
-      <!-- CTA rechts -->
-      <div class="col-md-4">
-        <aside class="patenschaft_cta">
-          <a class="btn btn-primarys patenschaft_btn" href="/#kontakt">
-            Jetzt Bildungspate werden
-          </a>
-        </aside>
-      </div>
-    </div>
+                  <!-- Erfolgsgeschichten -->
+                  <div class="section-header" style="margin-top:50px;">
+                      <h3 class="section-header__subtitle">Erfolgsgeschichten</h3>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="card card--story">
+                              <p><strong>Lena, 13 Jahre</strong>, hat wieder Freude am Lernen –<br>
+                              dank eines Bildungspaten aus Bad Lippspringe.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="card card--story">
+                              <p><strong>Danilo, 15 Jahre</strong>, hat den Realschulabschluss geschafft –<br>
+                              dank eines Bildungspaten aus Schlangen.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="card card--story">
+                              <p><strong>Amina, 7 Jahre</strong>, erledigt jetzt stolz selbstständig Hausaufgaben –<br>
+                              dank eines Bildungspaten aus Bad Lippspringe.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="card card--story">
+                              <p><strong>Fatima, 17 Jahre</strong>, hat am Berufskolleg den höheren Abschluss erworben –<br>
+                              dank eines Bildungspaten aus Bad Lippspringe.</p>
+                          </div>
+                      </div>
+                  </div>
 
-    <!-- Erfolgsgeschichten -->
-    <div class="section_heading" style="margin-top:50px;">
-      <h3>Erfolgsgeschichten</h3>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="story_card">
-          <p><strong>Lena, 13 Jahre</strong>, hat wieder Freude am Lernen –<br>
-          dank eines Bildungspaten aus Bad Lippspringe.</p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="story_card">
-          <p><strong>Danilo, 15 Jahre</strong>, hat den Realschulabschluss geschafft –<br>
-          dank eines Bildungspaten aus Schlangen.</p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="story_card">
-          <p><strong>Amina, 7 Jahre</strong>, erledigt jetzt stolz selbstständig Hausaufgaben –<br>
-          dank eines Bildungspaten aus Bad Lippspringe.</p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="story_card">
-          <p><strong>Fatima, 17 Jahre</strong>, hat am Berufskolleg den höheren Abschluss erworben –<br>
-          dank eines Bildungspaten aus Bad Lippspringe.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- CTA unten -->
-    <div class="stories_cta">
-      <p>
-        Unterstützen Sie gezielt Familien mit kleinem Einkommen<br>
-        und machen Sie Bildung für alle möglich. 
-        <a href="#bildungspate"><strong>Bildungspate werden!</strong></a>
-      </p>
-    </div>
-
-  </div>
-</section>
-<!-- Bildungspate & Erfolgsgeschichten Ende 
-<section id="partner" class="partners_section layout_padding">
-  <div class="container">
-    <div class="section_heading text-center">
-      <h2>Unsere Partner</h2>
-      <p class="partners_sub">Gemeinsam schaffen wir Chancen.</p>
-    </div>
-
-    <div id="partnerScroller" class="partner-scroller">
-      <div class="partner-track">
-       LOGO LİSTESİ: sadece buraya img ekle 
-       
-        <img src="/assets/logos/partner4.png" alt="Partner 4" class="partner_logo">
-        <img src="/assets/logos/partner5.png" alt="Partner 5" class="partner_logo">
-        <img src="/assets/logos/partner6.png" alt="Partner 6" class="partner_logo">
-      </div>
-    </div>
-  </div>
-</section>
-
- Unsere Partner – Ende 
-</div>-->
+                  <!-- CTA unten -->
+                  <div class="stories_cta">
+                      <p>
+                          Unterstützen Sie gezielt Familien mit kleinem Einkommen<br>
+                          und machen Sie Bildung für alle möglich.
+                          <a href="#bildungspate"><strong>Bildungspate werden!</strong></a>
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- Patenschaft Section End -->
 
 
 
@@ -531,69 +523,70 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      
       <!--Newsletter Bereich Ende -->
 
-      <!--services section end -->
-      <!--footer section start -->
-      <div class="footer_section" id="contact">
-      <div class="container">
-    <h1 class="touch_text">Kontaktieren Sie uns</h1>
-    <div class="email_box">
-        <div class="input_main">
-            <form action="" method="POST">
-                <div class="form-group">
-                    <input type="text" class="email-bt form-control" placeholder="Name" name="Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="email-bt form-control" placeholder="Telefon" name="Phone" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="email-bt form-control" placeholder="E-Mail" name="Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea class="massage-bt form-control" placeholder="Nachricht" rows="5" id="comment" name="Massage" required></textarea>
-                </div>
-                <div class="send_bt">
-                    <button type="submit" class="btn btn-primarys">Senden</button>
-                </div>
-            </form>
-            <!-- Erfolg- oder Fehlermeldung anzeigen -->
-            <?php echo $message; ?>
-        </div>
-    </div>
-</div>
+      <!-- Contact Section Start -->
+      <section class="section section--contact" id="contact">
+          <div class="container">
+              <div class="section-header">
+                  <h1 class="touch_text">Kontaktieren Sie uns</h1>
+              </div>
+              <div class="section-content">
+                  <div class="email_box">
+                      <div class="input_main">
+                          <form action="" method="POST">
+                              <div class="form-group">
+                                  <input type="text" class="email-bt form-control" placeholder="Name" name="Name" required>
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" class="email-bt form-control" placeholder="Telefon" name="Phone" required>
+                              </div>
+                              <div class="form-group">
+                                  <input type="email" class="email-bt form-control" placeholder="E-Mail" name="Email" required>
+                              </div>
+                              <div class="form-group">
+                                  <textarea class="massage-bt form-control" placeholder="Nachricht" rows="5" id="comment" name="Massage" required></textarea>
+                              </div>
+                              <div class="send_bt">
+                                  <button type="submit" class="btn-success-custom">Senden</button>
+                              </div>
+                          </form>
+                          <!-- Erfolg- oder Fehlermeldung anzeigen -->
+                          <?php echo $message; ?>
+                      </div>
+                  </div>
 
-      <div class="call_main">
-         <div class="call_text">
-            <img src="images/call-icon.png">
-            <span class="padding_left_15">+49 159 06377920</span>
-         </div>
-         <div class="call_text">
-            <img src="images/mail-icon.png">
-            <span class="padding_left_15">info@chancenschmiede.com</span>
-         </div>
-      </div>
+                  <div class="call_main">
+                      <div class="call_text">
+                          <img src="images/call-icon.png">
+                          <span class="padding_left_15">+49 159 06377920</span>
+                      </div>
+                      <div class="call_text">
+                          <img src="images/mail-icon.png">
+                          <span class="padding_left_15">info@chancenschmiede.com</span>
+                      </div>
+                  </div>
 
-      <!-- Neuer Abschnitt für Impressum, AGBs und Datenschutzerklärung -->
-      <div class="footer_links mt-4">
-         <ul class="list-inline text-center">
-            <li class="list-inline-item">
-               <a href="impressum.php" class="footer-link" >Impressum</a>
-            </li>
-            <li class="list-inline-item">
-               <a href="agbs.php" class="footer-link"  >AGBs&Datenschutzerklärung</a>
-            </li>
-        
-         </ul>
-      </div>
+                  <!-- Neuer Abschnitt für Impressum, AGBs und Datenschutzerklärung -->
+                  <div class="footer_links mt-4">
+                      <ul class="list-inline text-center">
+                          <li class="list-inline-item">
+                              <a href="impressum.php" class="footer-link">Impressum</a>
+                          </li>
+                          <li class="list-inline-item">
+                              <a href="agbs.php" class="footer-link">AGBs&Datenschutzerklärung</a>
+                          </li>
+                      </ul>
+                  </div>
 
-   <div class="footer_links mt-4">
-         <ul class="list-inline text-center">
-         <li>Logo made by <a href="https://www.designevo.com/" title="Free Online Logo Maker" class="footer-link">DesignEvo free logo creator</a></li>
-         <li>Photos designed by <a href="https://de.freepik.com/fotos-kostenlos/mittlere-aufnahme-eines-jungen-mannes-der-mathematik-unterrichtet_45114618.htm title="Freepik" class="footer-link">Freepik</a> <a href="https://de.freepik.com/autor/kamranaydinov" title="Freepik" class="footer-link">KamranAydinov</a> <a href="https://de.freepik.com/fotos-kostenlos/ein-junges-maedchen-mit-einem-rucksack-auf-den-schultern-auf-einem-gelben-hintergrund-der-mit-generative-ai-technologie-erstellt-wurde_264307615.htm" title="Freepik" class="footer-link">atlascompany</a> <a href="https://www.freepik.com/free-photo/book-day-with-group-younf-childre_6914198.htm#fromView=serie&position=6" title="Freepik" class="footer-link">Freepik</a></li>
-
-         </ul>
-      </div>
-   </div>
-</div>
+                  <div class="footer_links mt-4">
+                      <ul class="list-inline text-center">
+                          <li>Logo made by <a href="https://www.designevo.com/" title="Free Online Logo Maker" class="footer-link">DesignEvo free logo creator</a></li>
+                          <li>Photos designed by <a href="https://de.freepik.com/fotos-kostenlos/mittlere-aufnahme-eines-jungen-mannes-der-mathematik-unterrichtet_45114618.htm title="Freepik" class="footer-link">Freepik</a> <a href="https://de.freepik.com/autor/kamranaydinov" title="Freepik" class="footer-link">KamranAydinov</a> <a href="https://de.freepik.com/fotos-kostenlos/ein-junges-maedchen-mit-einem-rucksack-auf-den-schultern-auf-einem-gelben-hintergrund-der-mit-generative-ai-technologie-erstellt-wurde_264307615.htm" title="Freepik" class="footer-link">atlascompany</a> <a href="https://www.freepik.com/free-photo/book-day-with-group-younf-childre_6914198.htm#fromView=serie&position=6" title="Freepik" class="footer-link">Freepik</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- Contact Section End -->
 
 <!-- Styles für die Links -->
 

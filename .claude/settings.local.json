@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php:*)",
+      "Bash(where python python3 node)",
+      "Bash(C:UsersAhmetSanliDesktopphpphp.exe -S localhost:8000)",
+      "Bash(\"/c/Users/AhmetSanli/Desktop/php/php.exe\" -S localhost:8000)",
+      "Bash(curl:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
